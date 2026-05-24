@@ -1,0 +1,55 @@
+---
+title: Installation
+description: Install the Noqta SDK in your project
+icon: Download
+---
+
+The Noqta SDK is published on npm and supports Node.js 20 and newer.
+
+## Install with your package manager
+
+import { Tabs, Tab } from "fumadocs-ui/components/tabs";
+ 
+<Tabs items={["npm", "pnpm", "bun"]}>
+  <Tab value="npm">```bash npm install @noqta/sdk ```</Tab>
+  <Tab value="pnpm">```bash pnpm add @noqta/sdk ```</Tab>
+  <Tab value="bun">```bash bun add @noqta/sdk ```</Tab>
+</Tabs>
+ 
+## Verify the installation
+ 
+Create a small test script and run it.
+ 
+```typescript
+import { NoqtaClient } from "@noqta/sdk";
+ 
+const client = new NoqtaClient({ apiKey: process.env.NOQTA_API_KEY });
+const status = await client.health.check();
+console.log(status);
+```
+
+import { Callout } from "fumadocs-ui/components/callout";
+import { Files, Folder, File } from "fumadocs-ui/components/files";
+
+<Callout type="info">
+  The SDK ships with TypeScript types out of the box. No extra installs needed.
+</Callout>
+
+<Callout type="warn">
+  Never commit your API key to git. Use environment variables instead.
+</Callout>
+
+## Project structure
+
+After installation, your project should look like this.
+
+<Files>
+  <Folder name="src" defaultOpen>
+    <File name="index.ts" />
+    <Folder name="lib">
+      <File name="noqta.ts" />
+    </Folder>
+  </Folder>
+  <File name=".env.local" />
+  <File name="package.json" />
+</Files>

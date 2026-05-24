@@ -1,13 +1,52 @@
 ---
-title: Hello World
-description: Your first document
+title: Introducción
+description: Todo lo que tenés que saber para que el sitio de la AOA esté siempre actualizado
+icon: Presentation
 ---
 
-Welcome to the docs! You can start writing documents in `/content/docs`.
+# Bienvenidos a la documentación del sitio de la AOA
 
-## What is Next?
+import { Card, Cards } from "fumadocs-ui/components/card";
+
+<Callout type="info" title="Idea General">
+  La mayor parte de la información que aparece en el sitio es EDITABLE, ya sean
+  datos concretos o imágenes o textos, notas y comentarios.
+</Callout>
+
+## Conceptos básicos
+
+Toda la información se guarda en una base de datos. Los datos a guardar pueden ser:
+
+- 🗂️ **Datos básicos o primarios:** Son datos que corresponden a hechos reales, por ejemplo valores de cuotas, fechas de campeonatos, nombres de competidores, etc. Estos datos se pueden filtrar y ordenar para mostrar la información de diferentes maneras.
+- 📓 **Datos para contenido:** Textos e imágenes.
+- 🏗️ **Datos para el layout:** Se guarda información sobre qué datos de contenido vamos a mostrar, en qué orden y, en algunos casos, qué colores se van a usar.
+
+En las dos capturas de pantalla de la homepage que se muestran en la imagen que sigue se puede ver cómo se usa cada tipo de datos.
+
+![IntroDatos](/paraDocsIntro.jpg)
+
+## Setting up Dokploy
+
+Getting started with Dokploy is straightforward. Follow our guides to install and configure your applications and databases effectively.
+
+## Setting up
+
+Please go to get started.
 
 <Cards>
-  <Card title="Learn more about Next.js" href="https://nextjs.org/docs" />
-  <Card title="Learn more about Fumadocs" href="https://fumadocs.dev" />
+  <Card href="/docs/core/installation" title="Installation" description="Learn how to install Dokploy." />
+
+<Card
+  href="/docs/core/applications"
+  title="Applications"
+  description="Learn how to deploy applications."
+/>
+
+<Card
+  href="/docs/core/databases"
+  title="Databases"
+  description="Learn how to deploy databases."
+/>
+
+  <Card href="/docs/core/docker-compose" title="Docker Compose" description="Learn how to use Docker Compose with Dokploy." />
 </Cards>
