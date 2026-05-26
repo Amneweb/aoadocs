@@ -7,23 +7,40 @@ icon: ClipboardPen
 import { ExternalLink } from "lucide-react";
 import Link from "fumadocs-core/link";
 
+## Definición
+
 Las páginas editables consisten en un conjunto de elementos (o cajas de información) dispuestos uno a continuación del otro de manera de generar un resultado visual coherente con contenido adecuado a lo que se quiere mostrar.
 
-En el video a continuación se muestran los elementos de la página Trámites.
+## Ejemplo
+
+En el video a continuación se muestran algunos de los elementos de la página Trámites.
 
 - **Primer parte:** Datos básicos, similares a los datos de <Link href="/docs/colecciones/metadata">`Metadata`</Link> de las páginas pre armadas
 
-- **Segunda parte:** Elementos varios que luego de guardados, dan lugar a la página completa, entre ellos:
+- **Segunda parte:** Elementos varios que luego de guardados, dan lugar a la página completa. A medida que se van desplegando los elementos, se muestra una imagen de cómo se ve el contenido en la página real. Algunas de las cajas de contenido que se muestran de ejemplo son:
 
-| Elemento            | Función en la página                                                     |
-| ------------------- | ------------------------------------------------------------------------ |
-| `conjunto de items` | Listado de requisitos para competir                                      |
-| `destacado`         | Cuadro rojo indicando que no se puede pasar de timoneles a principiantes |
-| `bloque de texto`   | Pasos a seguir para pedir un duplicado                                   |
-| `caja de imagen`    | Información sobre cómo acceder al sector de selectivos                   |
+| Elemento            | Función en la página                                                      |
+| ------------------- | ------------------------------------------------------------------------- |
+| `conjunto de items` | Listado de requisitos para competir                                       |
+| `destacado`         | Cuadro negro indicando que no se puede pasar de timoneles a principiantes |
+| `bloque de texto`   | Pasos a seguir para pedir un duplicado                                    |
+| `caja de imagen`    | Información sobre cómo acceder al sector de selectivos                    |
 
 <video controls className="w-full rounded-xl border">
   <source src="../../editables.mp4" type="video/mp4" />
 </video>
 
+## Resultado final
+
 Para ver el resultado final, ir a <Link href="http://76.13.227.142:3000/aoa/tramites" external>`Trámites`</Link>
+
+<Callout type="idea">
+  Apenas se accede a la página de trámites, se ve una tabla de contenido. Esa
+  tabla no es generada por el administrador del sitio en forma directa, sino que
+  se autogenera en base a los títulos ingresados en las cajas de generación de
+  contenido.
+</Callout>
+
+Para más información sobre la funcionalidad, ir a <Link href="/docs/paginas/editables/elementos">`elementos de páginas editables`</Link>
+
+![Captura de pantalla mostrando la tabla de contenido en la página trámites](/paraEditables.jpg)
