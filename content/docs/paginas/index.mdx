@@ -1,0 +1,50 @@
+---
+title: Tipos de páginas
+description: Páginas prearmadas vs páginas editables.
+icon: PanelsTopLeft
+---
+
+import { Card, Cards } from "fumadocs-ui/components/card";
+import { ClipboardPen, TableProperties } from "lucide-react";
+
+## Hay 2 tipos
+
+<Cards>
+  <Card
+    icon={<ClipboardPen />}
+    href="/docs/paginas/editables"
+    title="Páginas editables"
+    className="flex gap-5 justify-between items-center"
+  />
+  <Card
+    icon={<TableProperties />}
+    href="/docs/paginas/prearmadas"
+    title="Páginas prearmadas"
+    className="flex gap-5 justify-between items-center"
+  />
+</Cards>
+
+## Diferencia entre pre-armadas y editables
+
+La diferencia básica entre ambos tipos de páginas es que en las pre armadas, los datos a editar son muy pocos y tienen lugar fijo y definido en la página. En las editables, en cambio, además de poder modificar los mismos datos que en las pre-armadas, se puede crear contenido completamente nuevo, con imágenes, textos, referencias, etc.
+
+<Callout type="info">
+  Las páginas pre-armadas no tienen un lugar específico en el menú del panel de
+  control, ya que se generan programáticamente juntando los datos de las
+  colecciones que la conforman.
+</Callout>
+
+<Callout type="info">
+  Las páginas editables sí tienen lugar en el menú del panel de control, y hay
+  una entrada por cada una de dichas páginas.
+</Callout>
+
+En la imagen que sigue se ven todas las páginas editables de datos únicos. Estas páginas no son coleccionables, ya que no hay dos páginas con la misma estructura de datos.
+
+<Callout type="warn">
+  Hay otras páginas, llamadas páginas de contenido, que aparecen en el menú en
+  el área de colecciones, que sí repiten su estructura, y se crean como las
+  noticias.
+</Callout>
+![Imagen del panel de control de la Home page donde se ve el menú
+lateral](/paraMenuPrearmadas.jpg)

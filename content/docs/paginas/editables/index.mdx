@@ -1,0 +1,29 @@
+---
+title: Páginas editables
+description: Cómo se editan y partes que las componen
+icon: ClipboardPen
+---
+
+import { ExternalLink } from "lucide-react";
+import Link from "fumadocs-core/link";
+
+Las páginas editables consisten en un conjunto de elementos (o cajas de información) dispuestos uno a continuación del otro de manera de generar un resultado visual coherente con contenido adecuado a lo que se quiere mostrar.
+
+En el video a continuación se muestran los elementos de la página Trámites.
+
+- **Primer parte:** Datos básicos, similares a los datos de <Link href="/docs/colecciones/metadata">`Metadata`</Link> de las páginas pre armadas
+
+- **Segunda parte:** Elementos varios que luego de guardados, dan lugar a la página completa, entre ellos:
+
+| Elemento            | Función en la página                                                     |
+| ------------------- | ------------------------------------------------------------------------ |
+| `conjunto de items` | Listado de requisitos para competir                                      |
+| `destacado`         | Cuadro rojo indicando que no se puede pasar de timoneles a principiantes |
+| `bloque de texto`   | Pasos a seguir para pedir un duplicado                                   |
+| `caja de imagen`    | Información sobre cómo acceder al sector de selectivos                   |
+
+<video controls className="w-full rounded-xl border">
+  <source src="../../editables.mp4" type="video/mp4" />
+</video>
+
+Para ver el resultado final, ir a <Link href="http://76.13.227.142:3000/aoa/tramites" external>`Trámites`</Link>

@@ -1,52 +1,124 @@
 ---
 title: Introducción
-description: Todo lo que tenés que saber para que el sitio de la AOA esté siempre actualizado
+description: Breve introducción al contenido de esta documentación para editores del sitio web de la AOA.
 icon: Presentation
 ---
 
-# Bienvenidos a la documentación del sitio de la AOA
-
+import { Files, Folder, File } from "fumadocs-ui/components/files";
 import { Card, Cards } from "fumadocs-ui/components/card";
+import { Banner } from "fumadocs-ui/components/banner";
+import {
+  HomeIcon,
+  QrCode,
+  TableProperties,
+  NotebookText,
+  Layers,
+} from "lucide-react";
 
-<Callout type="info" title="Idea General">
-  La mayor parte de la información que aparece en el sitio es EDITABLE, ya sean
-  datos concretos o imágenes o textos, notas y comentarios.
+## Objetivo del sitio de la AOA
+
+<Callout type="warn">
+  La idea central de este website es que se convierta en LA fuente de
+  información referida a las actividades de la Clase Optimist en Argentina.
+  Tiene que ser un sitio confiable y para eso, tiene que contar con información
+  sin errores y actualizada.
 </Callout>
 
-## Conceptos básicos
+<Callout type="info">
+  La mayor parte de la información que aparece en el sitio es EDITABLE sin tener
+  que acudir a un desarrollador. Los administradores del sitio podrán modificar
+  el contenido de los textos, las imágenes, los datos numéricos y, en algunos
+  casos, el orden en que se muestran las secciones en las páginas.
+</Callout>
 
-Toda la información se guarda en una base de datos. Los datos a guardar pueden ser:
+## Objetivo de esta documentación
 
-- 🗂️ **Datos básicos o primarios:** Son datos que corresponden a hechos reales, por ejemplo valores de cuotas, fechas de campeonatos, nombres de competidores, etc. Estos datos se pueden filtrar y ordenar para mostrar la información de diferentes maneras.
-- 📓 **Datos para contenido:** Textos e imágenes.
-- 🏗️ **Datos para el layout:** Se guarda información sobre qué datos de contenido vamos a mostrar, en qué orden y, en algunos casos, qué colores se van a usar.
+Para conseguir que toda la información sea EDITABLE, la mayor parte de la misma está guardada en una base de datos. Para modificar, borrar o agregar información, se accede a la base de datos desde un **panel de control**.
 
-En las dos capturas de pantalla de la homepage que se muestran en la imagen que sigue se puede ver cómo se usa cada tipo de datos.
+<Banner changeLayout={false}
+  variant="rainbow"
+  rainbowColors={[
+    "rgba(251, 218, 0, 0.5)",
+    "rgba(103, 179, 214, 0.5)",
+    "transparent",
+    "rgba(103, 179, 214, 0.5)",
+    "transparent",
+    "rgba(103, 179, 214, 0.5)",
+    "transparent",
+  ]}
+>
 
-![IntroDatos](/paraDocsIntro.jpg)
+En esta documentación se explica en detalle cómo se usa el panel de control
 
-## Setting up Dokploy
+</Banner>
+![Capturas de pantalla del panel de control de Strapi](/paraIntro.jpg)
 
-Getting started with Dokploy is straightforward. Follow our guides to install and configure your applications and databases effectively.
+## Cómo usar esta documentación
 
-## Setting up
+Podés moverte de manera 'ordenada' siguiendo los items del menú de la barra lateral, o ir "directo" al grano desde los enlaces que siguen.
 
-Please go to get started.
+<span className="opacity-60">
+  Debajo de todas las páginas también tenés enlaces para ir para adelante o para
+  atrás siguiendo el orden del menú.
+</span>
 
 <Cards>
-  <Card href="/docs/core/installation" title="Installation" description="Learn how to install Dokploy." />
+  <Card icon={<HomeIcon />} href="/docs/conceptos/datos" title="Cómo se edita la Home Page" description="Pasos para agregar, borrar o editar información de la página de inicio, o para reordenar las secciones." />
 
 <Card
-  href="/docs/core/applications"
-  title="Applications"
-  description="Learn how to deploy applications."
+  icon={<TableProperties />}
+  href="/docs/colecciones/campeonatos"
+  title="Crear o editar un campeonato"
+  description="Crear, editar y borrar entradas de este tipo de datos."
 />
 
 <Card
-  href="/docs/core/databases"
-  title="Databases"
-  description="Learn how to deploy databases."
+  icon={<NotebookText />}
+  href="/docs/paginas"
+  title="Tipos de páginas"
+  description="Cuáles son los tipos de páginas que aparecen en el sitio y cómo se alimentan."
 />
 
-  <Card href="/docs/core/docker-compose" title="Docker Compose" description="Learn how to use Docker Compose with Dokploy." />
+  <Card
+  icon={<Layers />} href="/docs/colecciones/resultados" title="Resultados" description="Cómo agregar un resultado para que se vea en diferentes partes del sitio" />
 </Cards>
+
+### Estructura de carpetas de esta documentación
+
+Esta estructura es sólo visual, no tiene enlaces, pero te sirve de guía para saber dónde estás parado en la documentación. Click en las carpetas para desplegar su contenido.
+
+<Files>
+  <Folder name="Documentación" defaultOpen>
+    <File name="index.mdx" className="text-fd-primary! bg-fd-primary/10!" />
+    <Folder name="Conceptos Generales">
+      <File name="crud-operations.mdx" />
+      <File name="datos.mdx" />
+      <Folder name="Panel de control">
+        <File name="campos.mdx" />
+        <File name="menu.mdx" />
+      </Folder>
+    </Folder>
+    <Folder name="Colecciones">
+      <File name="index.mdx" />
+      <File name="campeonatos.mdx" />
+      <File name="resultados.mdx" />
+      <File name="competidores.mdx" />
+      <File name="titulos.mdx" />
+      <File name="documentos.mdx" />
+    </Folder>
+    <Folder name="Páginas">
+      <File name="index.mdx" />
+      <Folder name="Páginas prearmadas">
+        <File name="index.mdx" />
+      </Folder>
+      <Folder name="Páginas editables">
+        <File name="index.mdx" />
+        <File name="elementos.mdx" />
+        <Folder name="Home Page">
+          <File name="index.mdx" />
+          <File name="hero.mdx" />
+        </Folder>
+      </Folder>
+    </Folder>
+  </Folder>
+</Files>

@@ -13,9 +13,8 @@ export function baseOptions(): BaseLayoutProps {
       ),
     },
     links: [
-      { text: "Documentation", url: "/docs" },
+      { text: "Documentación", url: "/docs" },
       { text: "Web de AOA", url: "/" },
-      { text: "Autogestión afiliados", url: "/" },
     ],
     githubUrl: `https://github.com/${gitConfig.user}/${gitConfig.repo}`,
   };

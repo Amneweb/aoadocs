@@ -1,12 +1,18 @@
 {
-  "title": "Website AOA",
+  "title": "AOA Docs",
   "pages": [
     "index",
-    "---Getting Started---",
-    "getting-started",
-    "---Paginas---",
-    "paginas",
-    "---Tablas---",
-    "tablas"
+    "---Conceptos generales---",
+    "conceptos/datos",
+    "conceptos/crud-operations",
+    "conceptos/dashboard",
+    "---Colecciones---",
+    "colecciones",
+    "---Páginas---",
+    "paginas/index",
+    "paginas/editables",
+    "paginas/prearmadas",
+    "---Biblioteca de archivos---",
+    "media"
   ]
 }

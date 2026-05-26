@@ -1,0 +1,82 @@
+---
+title: Todas las colecciones
+description: Listado de todos los datos COLECCIONABLES y enlace a su documentación.
+icon: ClipboardList
+---
+
+import { Card, Cards } from "fumadocs-ui/components/card";
+import {
+  HomeIcon,
+  Trophy,
+  CalendarFold,
+  Sailboat,
+  Medal,
+  ArrowDownWideNarrow,
+  ArrowDownNarrowWide,
+  QrCode,
+  ScrollText,
+  UserStar,
+  TableProperties,
+  NotebookText,
+  Layers,
+  Scale,
+  Signature,
+  ShieldAlert,
+} from "lucide-react";
+
+Los datos "coleccionables" son los que tienen una estructura que se repite y se pueden tabular. Los ejemplos más comunes son: `competidores`, `campeonatos`, `documentos`, `faqs`, etc.
+
+Hay otros datos que tal vez a simple vista no parecen coleccionables, pero sí lo son, por ejemplo las `noticias` y las `páginas de contenido`.
+
+Hacé click en alguna de las tarjetas a continuación para ver cómo se carga la información correspondiente.
+
+<Cards>
+  <Card
+    icon={<CalendarFold />}
+    href="/docs/colecciones/campeonatos"
+    title="Campeonatos"
+    className="flex gap-5 justify-between items-center"
+  />
+  <Card
+    icon={<Medal />}
+    href="/docs/colecciones/titulos"
+    title="Titulos"
+    className="flex gap-5 justify-between items-center"
+  />
+  <Card
+    icon={<ArrowDownNarrowWide />}
+    href="/docs/colecciones/resultados"
+    title="Resultados"
+    className="flex gap-5 justify-between items-center"
+  />
+  <Card
+    icon={<UserStar />}
+    href="/docs/colecciones/competidores"
+    title="Competidores"
+    className="flex gap-5 justify-between items-center"
+  />
+  <Card
+    icon={<ScrollText />}
+    href="/docs/colecciones/noticias"
+    title="Noticias"
+    className="flex gap-5 justify-between items-center"
+  />
+  <Card
+    icon={<Scale />}
+    href="/docs/colecciones/reglas"
+    title="Reglas básicas"
+    className="flex gap-5 justify-between items-center"
+  />
+  <Card
+    icon={<ShieldAlert />}
+    href="/docs/colecciones/metadata"
+    title="Metadata"
+    className="flex gap-5 justify-between items-center"
+  />
+  <Card
+    icon={<Signature />}
+    href="/docs/colecciones/notas-al-pie"
+    title="Notas al pié"
+    className="flex gap-5 justify-between items-center"
+  />
+</Cards>

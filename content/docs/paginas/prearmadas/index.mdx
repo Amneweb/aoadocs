@@ -1,0 +1,74 @@
+---
+title: Páginas pre-armadas
+description: Qué elementos sí se pueden modificar de estas páginas
+icon: TableProperties
+---
+
+import Link from "fumadocs-core/link";
+import { ExternalLink } from "lucide-react";
+
+## Cuáles son las páginas pre-armadas
+
+Les decimos pre-armadas a las páginas cuya estructura de datos y layout ya está preestablecida y, una vez seteados los datos que mencionamos acá abajo, el contenido de la misma se actualiza automáticamente a medida que cambia la información de la <Link href="/docs/conceptos/datos#coleccionables">`colección`</Link> de la que toma los datos.
+
+Algunas de las páginas pre-armadas del sitio son (los enlaces llevan a la página real):
+
+- <Link
+    className="[&>p]:flex [&>p]:gap-3 [&>p]:items-center"
+    external
+    href="http://76.13.227.142:3000/campeonatos"
+  >
+    Campeonatos <ExternalLink className="size-4" />
+  </Link>
+- <Link
+    className="[&>p]:flex [&>p]:gap-3 [&>p]:items-center"
+    external
+    href="http://76.13.227.142:3000/resultados"
+  >
+    Resultados <ExternalLink className="size-4" />
+  </Link>
+- <Link
+    className="[&>p]:flex [&>p]:gap-3 [&>p]:items-center"
+    external
+    href="http://76.13.227.142:3000/documentos"
+  >
+    Documentos <ExternalLink className="size-4" />
+  </Link>
+- <Link
+    className="[&>p]:flex [&>p]:gap-3 [&>p]:items-center"
+    external
+    href="http://76.13.227.142:3000/blog"
+  >
+    Blog (listado de noticias) <ExternalLink className="size-4" />
+  </Link>
+- <Link
+    className="[&>p]:flex [&>p]:gap-3 [&>p]:items-center"
+    external
+    href="http://76.13.227.142:3000/aoa/autoridades"
+  >
+    Autoridades de AOA <ExternalLink className="size-4" />
+  </Link>
+
+## Partes de una página pre-armada
+
+Una página pre armada consta de 3 partes básicas (sin considerar el header con el menú superior y el footer con el listado inferior, que son iguales para todas las páginas del sitio)
+
+- Encabezado
+- Tabla de datos
+- Notas
+
+En la imagen a continuación se muestra un ejemplo con la página Campeonatos.
+
+![Captura de pantalla de página Campeonatos](/paraPaginasPreArmadas.jpg)
+
+### Encabezado
+
+Sus datos provienen de la colección <Link href="/docs/colecciones/metadata">`Metadata`</Link> y se pueden editar cuando sea necesario. Entre los datos a editar en Metadata se encuentran: `titulo`, `descripcion`, `patrocinio`, `notas al pie`
+
+### Tabla
+
+La tabla se arma sola, sin el input del desarrollador ni del administrador del sitio. Sus datos cambian a medida que se van agregando o modificando los datos de la colección correspondiente, en este caso Campeonatos.
+
+### Notas
+
+No todas las páginas la tienen, pero las <Link href="/docs/colecciones/notas-al-pie">`Notas al Pié`</Link> son una colección que contiene título y contenido y que se relaciona con la página de campeonatos a través de Metadata, como se explicó más arriba.

@@ -1,0 +1,82 @@
+---
+title: Crear, editar, borrar
+description: Operaciones básicas, comunes a todos los tipos de datos
+icon: Eye
+---
+
+## Crear
+
+Sólo se pueden crear nuevos documentos con datos coleccionables. Los editores no pueden agregar documentos de tipo único (single type en el menú del panel de control). Tampoco pueden crear nuevas colecciones.
+
+### Pasos
+
+Para agregar una nueva entrada a una colección, los pasos son siempre los mismos:
+
+<div className="fd-steps [&_h4]:fd-step">
+#### Elegir la colección 
+en el menú de la izquierda del panel de control
+
+#### Una vez abierta la pantalla de la colección
+
+hacer click en el botón azul de arriba a la derecha `New Entry`
+
+#### Se abre un formulario vacío
+
+con todos los campos para completar
+
+#### Completados los campos,
+
+se guarda el elemento haciendo click en el botón azul `PUBLISH`.
+
+</div>
+
+### Diferencia entre PUBLISH y SAVE
+
+Si no se esta seguro de que los datos ingresados sean los correctos, pero se desea guardar el trabajo realizado para completar los campos del formulario, en lugar de apretar PUBLISH se puede hacer click en SAVE y los datos quedan guardados en estado BORRADOR.
+
+<Callout type="warn" title="Atención">
+  Tener presente que si guardamos los datos pero no publicamos, los nuevos datos
+  nunca estarán visibles al público.
+</Callout>
+<Callout type="success" title="Sugerencia">
+  A no ser que los datos sobre los que se tienen dudas sean muy importantes, o
+  pueden generar problemas administrativos si se publican con errores,
+  aconsejamos siempre PUBLICAR apenas se completa el formulario. Si hay errores
+  se pueden editar y corregir después.
+</Callout>
+
+## Editar
+
+Los pasos son los mismos que para crear, con la diferencia de que el elemento ya estaba creado de antes y sólo se modificarán o completarán algunos campos.
+
+## Borrar
+
+Para borrar, una vez en la pantalla con la lista de elementos de la colección, seleccionar el elemento que se desea borrar y hacer click en el botón rojo que aparece una vez que tildamos la casilla de selección. Por último hacer click en el botón de confirmación de la acción.
+
+![Capturas de pantalla donde se ve cómo borrar](/paraBorrar.jpg)
+
+## Casos especiales
+
+<Callout type="error" title="No se pueden crear entrenadores">
+  No se pueden crear entrenadores desde el panel de control. Dado que cada
+  entrenador debe estar asociado a un usuario, es necesario que primero se cree
+  el usuario y luego se asocie el entrenador a dicho usuario. Si se creara un
+  entrenador desde el panel de control, muy probablemente quede suelto, sin
+  usuario asociado, por lo que el sistema se rompería.
+</Callout>
+
+#### Cómo crear entrenadores
+
+La creación de un entrenador requiere de un Registro a través del formulario de sign up de nuestra web. Lo mejor es que lo haga cada entrenador, pero si eso no es posible, podemos generar nosotros un nuevo usuario como si fueramos un team leader o entrenador. Una vez que se creó el usuario, debemos loguearnos al sistema con los datos recién establecidos y una vez dentro podremos modificar los datos básicos, agregando nombre y apellido.
+
+#### Borrado de entrenadores
+
+<Callout
+  type="error"
+  title="En algunos casos, no se puede borrar al entrenador"
+>
+  Si el entrenador que se desea borrar fue designado como team leader o
+  entrenador de un equipo seleccionado, NO se podrá borrar. Si había sido
+  agregado al equipo por error, primero deberá borrarse la relación entre el
+  entrenador y el campeonato y luego recién se podrá borrar el entrenador.
+</Callout>

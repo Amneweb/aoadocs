@@ -8,12 +8,11 @@ export default function HomePage() {
         <h1 className="text-5xl font-bold uppercase tracking-tight">
           Todo sobre el sitio de la AOA
         </h1>
-        <p className="max-w-2xl text-md text-fd-muted-foreground text-justify">
-          Es importantísimo que la web esté actualizada siempre, para inspirar
-          confianza y lograr que sea LA fuente de información de referencia.
-          Instagram o Facebook son muy volátiles y la información "desaparece"
-          muy rápido: o te lo perdiste o lo viste y cuando volvés a chequear,
-          tenés que scrollear hasta encontrar el post, si lo encontrás.
+        <p className="max-w-2xl text-md text-fd-muted-foreground text-balance">
+          Bienvenidos a la Documentación para editores y creadores de contenido
+          para el sitio de la AOA. En estas páginas encontrarás información
+          sobre cómo crear páginas, agregar, editar y borrar datos, y mantener
+          el sitio actualizado SIEMPRE.
         </p>
         <h2 className="text-3xl font-bold">¿Listo/a para empezar?</h2>
         <Image
@@ -22,7 +21,7 @@ export default function HomePage() {
           height={516}
           unoptimized
           alt="taza de café para empezar a trabajar"
-          className="rounded-2xl object-cover"
+          className="rounded-2xl max-w-2xl object-cover"
           loading="eager"
         />
         <div className="flex gap-4">
@@ -39,6 +38,16 @@ export default function HomePage() {
             View on GitHub
           </Link>
         </div>
+        <p className="text-sm max-w-xl text-fd-muted-foreground">
+          Si sos afiliado y llegaste acá buscando información sobre cómo
+          realizar trámites, este no es el lugar que buscabas. Andá a{" "}
+          <a
+            href="http://76.13.227.142/aoa/tramites"
+            className="underline underline-offset-4 hover:no-underline"
+          >
+            GUÍA DE TRÁMITES
+          </a>
+        </p>
       </section>
     </main>
   );
