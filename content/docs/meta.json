@@ -10,8 +10,8 @@
     "colecciones",
     "---Páginas---",
     "paginas/index",
-    "paginas/editables",
     "paginas/prearmadas",
+    "paginas/editables",
     "---Biblioteca de archivos---",
     "media"
   ]

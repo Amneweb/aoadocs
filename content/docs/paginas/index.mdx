@@ -5,9 +5,110 @@ icon: PanelsTopLeft
 ---
 
 import { Card, Cards } from "fumadocs-ui/components/card";
-import { ClipboardPen, TableProperties } from "lucide-react";
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+import { ClipboardPen, TableProperties, ExternalLink } from "lucide-react";
+import Link from "fumadocs-core/link";
 
-## Hay 2 tipos
+## Tipos básicos
+
+- Páginas pre-armadas
+- Páginas editables
+
+## Diferencias
+
+|                                       | Pre-armadas                                                                                       | Editables                                                                                                                                                         |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Datos a editar                        | Pocos y con lugar fijo en la página (`titulo`, `descripcion`, `imagen principal`, `notas al pie`) | Los mismos que las pre-armadas más todo el contenido informativo: texto, imágenes, datos, etc                                                                     |
+| Lugar en el menú del panel de control | No tienen lugar, se arman programáticamente, es como que no existieran                            | Salvo dos tipos de páginas editables (`noticias` y `páginas de contenido`) las demás tienen su lugar en el menú y hay una entrada para cada una de dichas páginas |
+| Creación de nuevas páginas            | Sólo puede realizarlo el desarrollador                                                            | El editor sólo puede crear nuevas `noticias` y `páginas de contenido`. No puede crear nuevas págias "únicas" al estilo de las de la AOA.                          |
+
+En la imagen que sigue se ve el listado en el menú de todas las páginas editables de datos únicos. Estas páginas no son coleccionables, ya que no hay dos páginas con la misma estructura de datos.
+
+![Imagen del panel de control de la Home page donde se ve el menú
+lateral](/paraMenuPrearmadas.jpg)
+
+## Ejemplos
+
+<Tabs items={['Pre-armadas', 'Editables', 'Páginas de contenido']}>
+
+  <Tab value="Pre-armadas">
+    <ul>
+      <li>
+        <Link
+          className="[&>p]:flex [&>p]:gap-3 [&>p]:items-center"
+          external
+          href="http://76.13.227.142:3000/resultados"
+        >
+          Resultados <ExternalLink className="size-4" />
+        </Link>
+      </li>
+
+      <li>
+        <Link
+          className="[&>p]:flex [&>p]:gap-3 [&>p]:items-center"
+          external
+          href="http://76.13.227.142:3000/aoa/autoridades"
+        >
+          Autoridades <ExternalLink className="size-4" />
+        </Link>
+      </li>
+    </ul>
+
+  </Tab>
+
+  <Tab value="Editables">
+    <ul>
+      <li>
+        <Link
+          className="[&>p]:flex [&>p]:gap-3 [&>p]:items-center"
+          external
+          href="http://76.13.227.142:3000/aoa/somos"
+        >
+          Sobre la AOA <ExternalLink className="size-4" />
+        </Link>
+      </li>
+
+      <li>
+        <Link
+          className="[&>p]:flex [&>p]:gap-3 [&>p]:items-center"
+          external
+          href="http://76.13.227.142:3000/"
+        >
+          Home-Page <ExternalLink className="size-4" />
+        </Link>
+      </li>
+    </ul>
+
+  </Tab>
+
+  <Tab value="Páginas de contenido">
+    <ul>
+      <li>
+        <Link
+          className="[&>p]:flex [&>p]:gap-3 [&>p]:items-center"
+          external
+          href="http://76.13.227.142:3000/paginas/historia"
+        >
+          Historia del Optimist <ExternalLink className="size-4" />
+        </Link>
+      </li>
+
+      <li>
+        <Link
+          className="[&>p]:flex [&>p]:gap-3 [&>p]:items-center"
+          external
+          href="http://76.13.227.142:3000/paginas/clase"
+        >
+          La Clase en Argentina <ExternalLink className="size-4" />
+        </Link>
+      </li>
+    </ul>
+
+  </Tab>
+
+</Tabs>
+
+## Más información de cada una
 
 <Cards>
   <Card
@@ -23,28 +124,3 @@ import { ClipboardPen, TableProperties } from "lucide-react";
     className="flex gap-5 justify-between items-center"
   />
 </Cards>
-
-## Diferencia entre pre-armadas y editables
-
-La diferencia básica entre ambos tipos de páginas es que en las pre armadas, los datos a editar son muy pocos y tienen lugar fijo y definido en la página. En las editables, en cambio, además de poder modificar los mismos datos que en las pre-armadas, se puede crear contenido completamente nuevo, con imágenes, textos, referencias, etc.
-
-<Callout type="info">
-  Las páginas pre-armadas no tienen un lugar específico en el menú del panel de
-  control, ya que se generan programáticamente juntando los datos de las
-  colecciones que la conforman.
-</Callout>
-
-<Callout type="info">
-  Las páginas editables sí tienen lugar en el menú del panel de control, y hay
-  una entrada por cada una de dichas páginas.
-</Callout>
-
-En la imagen que sigue se ven todas las páginas editables de datos únicos. Estas páginas no son coleccionables, ya que no hay dos páginas con la misma estructura de datos.
-
-<Callout type="warn">
-  Hay otras páginas, llamadas páginas de contenido, que aparecen en el menú en
-  el área de colecciones, que sí repiten su estructura, y se crean como las
-  noticias.
-</Callout>
-![Imagen del panel de control de la Home page donde se ve el menú
-lateral](/paraMenuPrearmadas.jpg)
