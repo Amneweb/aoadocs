@@ -13,23 +13,22 @@ import {
   TableProperties,
   NotebookText,
   Layers,
+  Speech,
 } from "lucide-react";
 
 ## Objetivo del sitio de la AOA
 
-<Callout type="warn">
+<Callout type="success">
   La idea central de este website es que se convierta en LA fuente de
   información referida a las actividades de la Clase Optimist en Argentina.
   Tiene que ser un sitio confiable y para eso, tiene que contar con información
   sin errores y actualizada.
 </Callout>
 
-<Callout type="info">
-  La mayor parte de la información que aparece en el sitio es EDITABLE sin tener
-  que acudir a un desarrollador. Los administradores del sitio podrán modificar
-  el contenido de los textos, las imágenes, los datos numéricos y, en algunos
-  casos, el orden en que se muestran las secciones en las páginas.
-</Callout>
+La mayor parte de la información que aparece en el sitio es EDITABLE sin tener
+que acudir a un desarrollador. Los administradores del sitio podrán modificar
+el contenido de los textos, las imágenes, los datos numéricos y, en algunos
+casos, el orden en que se muestran las secciones en las páginas.
 
 ## Objetivo de esta documentación
 
@@ -53,6 +52,28 @@ En esta documentación se explica en detalle cómo se usa el panel de control
 </Banner>
 ![Capturas de pantalla del panel de control de Strapi](/paraIntro.jpg)
 
+### Accediendo al panel de control
+
+Para acceder al panel, se deberán usar los datos de acceso que enviamos por email, entrando a la dirección web que también te debería haber llegado por email. Recordá que, salvo que hayamos arreglado de otra manera, tu rol es de **EDITOR/A**.
+
+#### ✅ Qué podés hacer
+
+Modificar textos, cambiar imágenes, borrar textos, crear nuevos contenidos, crear noticias, borrar noticias, reordenar la página de inicio, agregar o sacar contenido de la página de inicio, modificar los menúes superior e inferior, etc
+
+#### 🚫 Qué NO podés hacer
+
+- Modificar el estilo general del sitio, cambiar colores, cambiar aspecto de las imágenes, y en general, modificar todo lo que se refiera al "look & feel".
+- Crear nuevas colecciones de datos. Por ejemplo si a la AOA alguna vez se le ocurre tener Optimists para prestar y quiere poner la info en la web, tendría que crear una colección `Barcos` con (marca, número de serie, fechas de uso, etc). Eso no lo puede crear un editor. Lo debe armar un desarrollador.
+- Similar a lo anterior, un editor no puede crear páginas especiales, tipo Resultados, o Autoridades. Para eso también se necesita un desarrollador.
+
+### Uso del panel de control
+
+Una vez en el panel de control aparecerá una pantalla como la vista más arriba, con varias opciones en el menú de la izquierda. Las más usadas serán:
+
+- 🏠 HOME: (icono de la casita) primera pantalla una vez que se accede al panel. Muestra las últimas entradas y una guía de pasos a seguir para conocer el panel de control. (Estas cajas de información se pueden poner y sacar al gusto de cada usuario)
+- 🪶 CONTENIDO: (ícono de la pluma) Haciendo click en la plumita se accede a la pantalla con el menú de contenido, que a su vez abre cada uno de los formularios editables.
+- 🖼️ MEDIA GALLERY: (ícono de las imágnes) Haciendo click en el ícono se accede a la biblioteca multimedia, con todos los archivos de imágenes y documentos utilizados en el sitio.
+
 ## Cómo usar esta documentación
 
 Podés moverte de manera 'ordenada' siguiendo los items del menú de la barra lateral, o ir "directo" al grano desde los enlaces que siguen.
@@ -63,13 +84,20 @@ Podés moverte de manera 'ordenada' siguiendo los items del menú de la barra la
 </span>
 
 <Cards>
-  <Card icon={<HomeIcon />} href="/docs/conceptos/datos" title="Cómo se edita la Home Page" description="Pasos para agregar, borrar o editar información de la página de inicio, o para reordenar las secciones." />
+  <Card icon={<HomeIcon />} href="/docs/paginas/editables/home-page" title="Cómo se edita la Home Page (en preparación)" description="Pasos para agregar, borrar o editar información de la página de inicio, o para reordenar las secciones." />
 
 <Card
   icon={<TableProperties />}
   href="/docs/colecciones/campeonatos"
   title="Crear o editar un campeonato"
   description="Crear, editar y borrar entradas de este tipo de datos."
+/>
+
+<Card
+  icon={<Speech />}
+  href="/docs/colecciones/asambleas"
+  title="Crear o editar Asambleas"
+  description="Crear, editar y borrar asambleas o reuniones de CD."
 />
 
 <Card
@@ -80,45 +108,5 @@ Podés moverte de manera 'ordenada' siguiendo los items del menú de la barra la
 />
 
   <Card
-  icon={<Layers />} href="/docs/colecciones/resultados" title="Resultados" description="Cómo agregar un resultado para que se vea en diferentes partes del sitio" />
+  icon={<Layers />} href="/docs/colecciones/resultados" title="Resultados (en preparación)" description="Cómo agregar un resultado para que se vea en diferentes partes del sitio" />
 </Cards>
-
-### Estructura de carpetas de esta documentación
-
-Esta estructura es sólo visual, no tiene enlaces, pero te sirve de guía para saber dónde estás parado en la documentación. Click en las carpetas para desplegar su contenido.
-
-<Files>
-  <Folder name="Documentación" defaultOpen>
-    <File name="index.mdx" className="text-fd-primary! bg-fd-primary/10!" />
-    <Folder name="Conceptos Generales">
-      <File name="crud-operations.mdx" />
-      <File name="datos.mdx" />
-      <Folder name="Panel de control">
-        <File name="campos.mdx" />
-        <File name="menu.mdx" />
-      </Folder>
-    </Folder>
-    <Folder name="Colecciones">
-      <File name="index.mdx" />
-      <File name="campeonatos.mdx" />
-      <File name="resultados.mdx" />
-      <File name="competidores.mdx" />
-      <File name="titulos.mdx" />
-      <File name="documentos.mdx" />
-    </Folder>
-    <Folder name="Páginas">
-      <File name="index.mdx" />
-      <Folder name="Páginas prearmadas">
-        <File name="index.mdx" />
-      </Folder>
-      <Folder name="Páginas editables">
-        <File name="index.mdx" />
-        <File name="elementos.mdx" />
-        <Folder name="Home Page">
-          <File name="index.mdx" />
-          <File name="hero.mdx" />
-        </Folder>
-      </Folder>
-    </Folder>
-  </Folder>
-</Files>

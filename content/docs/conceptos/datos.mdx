@@ -12,35 +12,29 @@ import { Card, Cards } from "fumadocs-ui/components/card";
 
 Teniendo en cuenta cómo vamos a usar los datos, podríamos agrupar los mismos en las siguientes 3 categorías
 
-- 🗂️ **Datos básicos o primarios:**
+- 🗂️ <strong className="uppercase">Datos básicos o primarios:</strong>
 
-  <span className="opacity-50">
-    Son datos que corresponden a hechos "reales", por ejemplo valores de cuotas,
-    fechas de campeonatos, nombres de competidores, etc. Estos datos se pueden
-    filtrar y ordenar para mostrar la información de diferentes maneras.
-  </span>
+  Son datos que corresponden a hechos "reales", por ejemplo valores de cuotas,
+  fechas de campeonatos, nombres de competidores, etc. Estos datos se pueden
+  filtrar y ordenar para mostrar la información de diferentes maneras.
 
-- 📓 **Datos para contenido:**
+- 📓 <strong className="uppercase">Datos para contenido:</strong>
 
-  <span className="opacity-50">
-    Textos e imágenes, generalmente se usan para armar noticias y o páginas para
-    lectura.
-  </span>
+  Textos e imágenes, generalmente se usan para armar noticias y o páginas para
+  lectura.
 
-- 🏗️ **Datos para el layout:**
+- 🏗️ <strong className="uppercase">Datos para el layout:</strong>
 
-  <span className="opacity-50">
-    Se guarda información sobre qué datos de contenido vamos a mostrar, en qué
-    orden y, en algunos casos, qué colores se van a usar.
-  </span>
+  Se guarda información sobre qué datos de contenido vamos a mostrar, en qué
+  orden y, en algunos casos, qué colores se van a usar.
 
 En las dos capturas de pantalla de la homepage que se muestran en la imagen que sigue se puede ver cómo se usa cada tipo de datos.
 
 ![Capturas de pantalla de homepage mostrando tipos de datos](/paraDocsIntro.jpg)
 
-### Información "coleccionable" vs información de datos únicos
+### Tipos de datos según su singularidad (datos repetitivos/coleccionables o únicos/singulares)
 
-**COLECCIONABLE**
+**DATOS COLECCIONABLES**
 
 Decimos que la información o tipo de datos es "coleccionable" cuando los datos se pueden agrupar de manera ordenada, por ejemplo en una tabla, y se obtiene una `colección`. Los datos, aunque cambian de una fila a otra, tienen todos la misma forma o el mismo esquema.
 Imaginemos la información sobre los campeonatos del calendario. Para cada campeonato tenemos el mismo tipo de información, que agrupamos en columnas y con los que armamos una tabla:
@@ -55,5 +49,12 @@ Imaginemos la información sobre los campeonatos del calendario. Para cada campe
 
 La forma de los datos no se repite y por lo tanto no se pueden armar colecciones. Los datos funcionan en un solo lugar. Por ejemplo, la página de inicio es una sola y la estructura de la misma se arma con datos únicos. [dentro de cada sector de la página puede haber datos coleccionables, pero estos están 'envueltos' por datos únicos]
 
-### para pasar a otra pagina
-cuando creamos una relación desde una collección relacionada (hija) hay que guardar el documento recién creado y el documento que llamó a 
+En la imagen que sigue se ven 3 capturas de pantalla correspondientes a:
+
+- Sobre la AOA
+- Valores de las cuotas
+- Autoridades
+
+Si bien parecen similares, la información en cada una de ellas es totalmente diferente y única. Por lo tanto, cada una de ellas es un DATO UNICO y no se puede repetir.
+
+![Capturas de pantalla de 3 páginas AOA](/paginasAOA.jpg)

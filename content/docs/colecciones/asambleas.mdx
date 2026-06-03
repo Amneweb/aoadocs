@@ -1,0 +1,39 @@
+---
+title: Asambleas
+description: Crear y editar Asambleas / reuniones de CD
+icon: Speech
+---
+
+import Link from "fumadocs-core/link";
+import { ExternalLink } from "lucide-react";
+
+## Abrir formulario
+
+Para crear o editar una Asamblea o Reunión de CD, debés abrir el formulario correspondiente desde el enlace que se encuentra en el menú de la izquierda del panel de control, dentro de las opciones de COLLECTION TYPES (es la primera o segunda opción).
+
+<Callout type="info" title="Asambleas y Reuniones">
+  A los efectos del sistema, las asambleas y las reuniones son lo mismo, y se
+  cargan desde el mismo formulario, eligiendo la información correcta en los
+  menúes desplegables.
+</Callout>
+
+## Datos básicos
+
+A continuación mostramos un listado de datos básicos a ingresar para `crear` una asamblea y que salga publicado en la lista de Asambleas, que en la web se ve bajo el nombre <Link external href="http://76.13.227.142/asambleas">AGENDA</Link>. Los datos que en la última columna tienen un SI resaltado en amarillo son OBLIGATORIOS, eso quiere decir que sin los mismos, no se puede crear la asamblea o reunión.
+
+| Nombre del campo       | Recomendaciones                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Tipo de dato      | Obligatorio                                                                       |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------- | --------------------------------------------------------------------------------- |
+| `fecha_asamblea`       | Colocar la fecha usando el calendario o escribiéndola a mano, recordando que si el formato es en inglés, el mes va primero (MM/DD/YYY). Colocar la hora en formato 24hs.                                                                                                                                                                                                                                                                                                                                           | Fecha y hora      | <span className="bg-yellow-100 px-1 border-1 border-yellow-400 rounded">SI</span> |
+| `en_un_club`           | Si fue en un club, poner en TRUE, sino dejarlo en FALSE                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Verdadero / Falso | NO                                                                                |
+| `club`                 | Si en `en_un_club` se eligió TRUE, aparecerá este campo para seleccionar el `club` o agregar uno. Hay alrededor de 20 clubes ya ingresados, pero si el que se desea ingresar no aparece, se lo puede crear en el momento haciendo click en '+ crear relación' o dejar este campo vacío, completar el resto de los datos, guardar el campeonato y <Link href="/docs/colecciones/clubes.mdx">`crear el club`</Link> desde el formulario correspondiente. Una vez creado el club, se puede volver y editar este valor | Relación          | NO                                                                                |
+| `lugar_asamblea`       | Si en `en_un_club` se eligió FALSE, poner la dirección o el nombre del lugar o "VIRTUAL"                                                                                                                                                                                                                                                                                                                                                                                                                           | Texto             | NO                                                                                |
+| `descripcion_asamblea` | Si se quiere se puede poner una descripción, como por ejemplo "Asamblea fin del ejercicio 2025-2027"                                                                                                                                                                                                                                                                                                                                                                                                               | Texto             | NO                                                                                |
+| `documentos_asambleas` | Se puede agarrar un documento ya creado en <Link href="/docs/colecciones/documentos.mdx">`Documentos`</Link>, o hacer click en + crear relación y agregar uno.                                                                                                                                                                                                                                                                                                                                                     | Relación          | NO                                                                                |
+| `tipo_asamblea`        | Elegir entre<br />`RCD = Reunión de CD` <br /> `AGO = Asamblea General Ordinaria` <br /> `AGE = Asamblea General Extraordinaria`                                                                                                                                                                                                                                                                                                                                                                                   | Restringido       | <span className="bg-yellow-100 px-1 border-1 border-yellow-400 rounded">SI</span> |
+| `anio_asamblea`        | Escribir el año sin puntos ni comas                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Número            | <span className="bg-yellow-100 px-1 border-1 border-yellow-400 rounded">SI</span> |
+
+## Ejemplo
+
+A continuación se muestra una captura de pantalla con los datos cargados para la creación de la **Reunión de CD del 27 de mayo de 2026**, que fue Virtual, por lo que no hubo que cargar ningún club.
+
+![Imagen del formulario para crear Asambleas](/Asambleas.jpg)
