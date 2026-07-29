@@ -7,7 +7,7 @@ export function baseOptions(): BaseLayoutProps {
     nav: {
       title: (
         <span className="flex items-center gap-2">
-          <Image src="/logo.svg" alt="" width={24} height={24} />
+          <Image src="/docs/logo.svg" alt="" width={24} height={24} />
           <span className="font-semibold">AOA Docs</span>
         </span>
       ),

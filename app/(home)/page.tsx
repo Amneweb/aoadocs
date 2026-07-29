@@ -16,7 +16,7 @@ export default function HomePage() {
         </p>
         <h2 className="text-3xl font-bold">¿Listo/a para empezar?</h2>
         <Image
-          src="/paraDocsLandingCompu.jpg"
+          src="/docs/paraDocsLandingCompu.jpg"
           width={900}
           height={516}
           unoptimized
