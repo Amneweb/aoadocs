@@ -1,6 +1,8 @@
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
 import { appName, gitConfig } from "./shared";
 import Image from "next/image";
+import { defineTranslations } from "fumadocs-core/i18n";
+import { uiTranslations } from "fumadocs-ui/i18n";
 
 export function baseOptions(): BaseLayoutProps {
   return {

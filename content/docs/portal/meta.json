@@ -1,0 +1,19 @@
+{
+  "title": "Portal",
+  "description": "Documentación sobre el portal de trámites de la AOA",
+  "icon": "ShieldUser",
+  "root": true,
+  "pages": [
+    "index",
+    "---Información general---",
+    "acerca-del-portal",
+    "membresia",
+    "---Por tipo de usuario---",
+    "tutores",
+    "entrenadores",
+    "administradores-de-club",
+    "personal-aoa",
+    "---Por tarea---",
+    "crear-un-afiliado"
+  ]
+}

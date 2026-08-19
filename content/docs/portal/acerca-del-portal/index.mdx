@@ -1,0 +1,46 @@
+---
+title: Roles y permisos
+description: Qué puede y no puede hacer cada usuario
+icon: UserKey
+---
+
+## Roles y permisos
+
+Este portal funciona por roles y permisos, es decir que cada usuario ingresará con un tipo de rol que lo habilitará para acceder a distintas secciones y realizar diferentes acciones.
+
+Los roles son:
+
+- Adultos responsables (o guardianes o responsables de cuenta)
+- Entrenadores
+- Administradores de club
+- Staff AOA
+  - Tesorería
+  - Medidores
+  - Encargados de afiliados y adultos vinculados
+  - Super Administradores
+
+### Incumbencia de cada rol
+
+| Acciones permitidas                                      |                     **Adulto Responsable**                      |      **Entrenador**       | **Tesorería** | **Medidor** | **Encargados de afiliados** | **Super Admin** |
+| -------------------------------------------------------- | :-------------------------------------------------------------: | :-----------------------: | :-----------: | :---------: | :-------------------------: | :-------------: |
+| Crear cuentas nuevas de afiliados                        |                               Si                                |            No             |      No       |     No      |             Si              |       Si        |
+| Modificar cuentas de afiliados                           |                              Si\*                               |            No             |      No       |     No      |             Si              |       Si        |
+| Editar y agregar adultos vinculados                      | Sólo los relacionados a los afiliados de los que es responsable |            No             |      No       |     No      |             Si              |       Si        |
+| Reservar turnos de medición                              |                               No                                | Si, sólo para sus alumnos |      No       |     Si      |             Si              |       Si        |
+| Reclamar barcos                                          |                              Si\*                               |            No             |      No       |     No      |             Si              |       Si        |
+| Disputar barcos                                          |                              Si\*                               |            No             |      No       |     No      |             No              |       No        |
+| Informar pagos                                           |                              Si\*                               |            No             |      No       |     No      |             Si              |       Si        |
+| Habilitar medición aun sin pagos aprobados por tesorería |                               No                                |            No             |      No       |     Si      |             No              |       Si        |
+
+💡 Si\* = Sólo de los afiliados de los cuales es responsable
+
+<Callout type="info" title="Adultos vinculados y responsables">
+  La cuenta de cada competidor tiene información sobre el competidor y datos de
+  contacto de los adultos vinculados al mismo (padre, madre, tutor, contacto de
+  emergencia, etc) Cada competidor podrá tener varios adultos vinculados pero
+  sólo uno de ellos tendrá acceso al portal para manipular los datos del
+  competidor a cargo. A ese adulto lo llamamos **adulto responsable** o
+  **responsable de cuenta**. Los demás son sólo adultos vinculados. Un adulto
+  responsable puede tener varios competidores a su cargo, por ejemplo un padre
+  con dos hijos.
+</Callout>

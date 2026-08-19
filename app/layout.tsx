@@ -8,7 +8,7 @@ const inter = Inter({
 
 export default function Layout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="es" suppressHydrationWarning>
       <body>
         <RootProvider>{children}</RootProvider>
       </body>

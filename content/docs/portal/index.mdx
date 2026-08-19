@@ -1,0 +1,84 @@
+---
+title: Introducción
+description: Guías del Portal de trámites de AOA.
+icon: BookOpen
+---
+
+import { Card, Cards } from "fumadocs-ui/components/card";
+import Link from "fumadocs-core/link";
+import { docsIconColors } from "@/lib/icon-colors";
+import {
+  FileSliders,
+  FileUser,
+  Store,
+  Users,
+  Shield,
+  Monitor,
+  Sailboat,
+} from "lucide-react";
+
+## Objetivos del portal
+
+El portal de trámites de la AOA permite realizar todos los trámites administrativos necesarios
+para que un competidor pueda participar en eventos del calendario y
+eventualmente seleccionar para participar en el exterior.
+
+### Requisitos para estar habilitado
+
+- Estar afiliado a la AOA
+- Tener su cuota anual al día
+- Haber presentado el deslinde de responsabilidad exigido por la FAY
+- Competir con equipo reglamentario
+- Competir con equipo que haya sido inspeccionado por AOA
+- Haber abonado las inscripciones correspondientes (a campeonatos y/o selectivos)
+
+Todos los trámites para cumplir con lo anterior, excepto la presentación del deslinde de responsabilidad, se harán en este portal.
+
+#### Deslinde de responsabilidad
+
+<Callout type="tip">
+
+Se debe descargar el modelo desde la web de la Federación Argentina de Yachting, completarlo y hacerlo certificar por escribano. Luego se enviará por correo o se presentará personalmente en las oficinas de la FAY, citas en Venezuela 110, Piso 12 A, CABA.
+
+</Callout>
+
+Click en el siguiente enlace para ir a la página del sitio de la FAY donde se publican todos los afiliados con el deslinde presentado, y desde la que se puede descargar el modelo
+
+<Link
+  external
+  href="https://fay.org/menores-autorizados/"
+  className="decoration-rose-500 underline-offset-6 hover:no-underline"
+>
+  {"https://fay.org/menores-autorizados/"}
+</Link>
+
+## Atajos
+
+Para navegar por la documentación usá el menú lateral o, en las tarjetas que siguen, elegí la sección que corresponda a tu tarea o función.
+
+<Cards>
+  <Card
+    title="Adultos Responsables"
+    icon={<FileUser color={docsIconColors.rosa} />}
+    description="Gestión de afiliados vinculados, cuotas, pagos y embarcaciones."
+    href="./tutores"
+  />
+  <Card
+    title="Administradores de club"
+    icon={<Store color={docsIconColors.rosa} />}
+    description="Tareas disponibles para los representantes de los clubes."
+    href="/portal/administradores-de-club"
+  />
+  <Card
+    title="Personal AOA"
+    icon={<Users color={docsIconColors.rosa} />}
+    description="Administración de afiliados, pagos, mediciones y permisos."
+    href="/portal/personal-aoa"
+  />
+  <Card
+    title="Entrenadores"
+    icon={<Sailboat color={docsIconColors.rosa} />}
+    description="Mediciones y notificaciones."
+    href="/portal/entrenadores"
+  />
+</Cards>

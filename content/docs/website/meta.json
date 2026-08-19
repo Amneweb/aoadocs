@@ -1,0 +1,15 @@
+{
+  "title": "Sitio web",
+  "description": "Documentación para administradores del website",
+  "icon": "Globe",
+  "root": true,
+  "pages": [
+    "index",
+    "---Conceptos generales---",
+    "conceptos",
+    "---Contenido del sitio---",
+    "colecciones",
+    "paginas",
+    "media"
+  ]
+}

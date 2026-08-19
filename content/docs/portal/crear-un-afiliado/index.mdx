@@ -1,0 +1,99 @@
+---
+title: Crear afiliado
+description: Cómo crear un afiliado nuevo.
+icon: CircleUser
+---
+
+import Link from "fumadocs-core/link";
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+import { ExternalLink } from "lucide-react";
+
+## Introducción
+
+Hay dos formas de crear un afiliado nuevo, esto depende de si el adulto responsable ya tiene o no tiene cuenta en el portal.
+
+Recordemos que los afiliados los crea un adulto, que a su vez debe crearse una cuenta para sí mismo. Por lo tanto si un adulto ya creó un nuevo afiliado en el portal anteriormente, ese adulto ya tiene una cuenta y deberá crear el afiliado una vez logueado a su cuenta.
+
+<Callout type="warning" title="Si te olvidaste tu usuario y/o contraseña">
+  No trates de generar una nueva cuenta porque el sistema verifica por DNI. Te
+  aconsejamos que trates de recuperar tu usuario haciendo un reseteo de password
+  con tu email o, si no te acordás de tu email, escribir a la AOA para que te
+  recordemos con qué casilla te habías logueado.
+</Callout>
+
+## Pasos para crear la nueva cuenta de afiliado
+
+<Tabs items={['Sin cuenta preexistente', 'Con cuenta preexistente']}>
+  <Tab value="Sin cuenta preexistente">
+
+### Adulto sin cuenta preexistente
+
+<div className="fd-steps [&_h4]:fd-step">
+
+#### Ingresar al portal [!toc]
+
+La entrada al portal es: <Link external href="https://afiliados.optimist-argentina.org">afiliados.optimist-argentina.org</Link>
+
+#### Elegir crear cuenta [!toc]
+
+Seleccionar Crear cuenta haciendo click en el botón azul
+
+#### Cargar datos personales del adulto [!toc]
+
+Este adulto será el responsable de la cuenta del afiliado y será el encargado de realizar todos los trámites, además de poder modificar datos del competidor, de sí mismo y de los demás adultos vinculados. Finalizado este paso y antes del siguiente el sistema verifica que el adulto no tenga una cuenta preexistente en el portal.
+
+#### Cargar datos del afiliado [!toc]
+
+Cargar datos personales. Tener en cuenta que los datos se cargan como si fuera una declaración jurada. Al igual que antes, antes de guardar los datos en la base de datos el sistema verifica que el competidor no haya sido ingresado en el portal con anterioridad.
+
+#### Ficha médica [!toc]
+
+Se piden datos de la obra social y teléfonos de emergencia. Si el competidor tiene alguna condición especial (por ejemplo alguna alergia) deberá informarse de la misma en el campo de texto.
+
+<Callout type="error" title="El campo de información extra es obligatorio">
+  El campo de información extra no puede quedar vacío. Si el competidor no tiene
+  ningún problema de salud especial, deberán ingresarse algún texto que indique
+  dicha situación, por ejemplo "Nada para informar".
+</Callout>
+
+#### FIN. El adulto responsable es dirigido al panel de control [!toc]
+
+</div>
+</Tab>
+  <Tab value="Con cuenta preexistente">
+
+### Adulto con cuenta preexistente
+
+<div className="fd-steps [&_h4]:fd-step">
+
+#### Ingresar al portal [!toc]
+
+La entrada al portal es, igual que antes: <Link external href="https://afiliados.optimist-argentina.org">afiliados.optimist-argentina.org</Link>
+
+#### Loguearse [!toc]
+
+Ingresar al portal con nombre de usuario o email, y contraseña. Si no se recuerda la contraseña, se puede elegir resetear el password. Si no se recuerda ni el usuario ni la contraseña, por favor ponerse en contacto con la AOA para recuperar la cuenta.
+
+#### En el panel de control [!toc]
+
+Una vez logueado, en el menú lateral del panel de control se debe elegir "Competidores".Una vez en la página Competidores, seleccionar la opción de crear afiliado, que será similar al ejemplo anterior, pero sólo cargando la información del afiliado
+
+#### Cargar datos del afiliado [!toc]
+
+Cargar datos personales. Tener en cuenta que los datos se cargan como si fuera una declaración jurada. Al igual que antes, antes de guardar los datos en la base de datos el sistema verifica que el competidor no haya sido ingresado en el portal con anterioridad.
+
+#### Ficha médica [!toc]
+
+Se piden datos de la obra social y teléfonos de emergencia. Si el competidor tiene alguna condición especial (por ejemplo alguna alergia) deberá informarse de la misma en el campo reservado a tal fin.
+
+<Callout type="error" title="El campo de información extra es obligatorio">
+  El campo de información extra no puede quedar vacío. Si el competidor no tiene
+  ningún problema de salud especial, deberán ingresarse algún texto que indique
+  dicha situación, por ejemplo "Nada para informar".
+</Callout>
+
+#### FIN. El adulto responsable es dirigido al panel de control [!toc]
+
+</div>
+ </Tab>
+</Tabs>

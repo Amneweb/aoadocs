@@ -7,6 +7,7 @@ icon: Presentation
 import { Files, Folder, File } from "fumadocs-ui/components/files";
 import { Card, Cards } from "fumadocs-ui/components/card";
 import { Banner } from "fumadocs-ui/components/banner";
+import { docsIconColors } from "@/lib/icon-colors";
 import {
   HomeIcon,
   QrCode,
@@ -84,29 +85,29 @@ Podés moverte de manera 'ordenada' siguiendo los items del menú de la barra la
 </span>
 
 <Cards>
-  <Card icon={<HomeIcon />} href="/docs/paginas/editables/home-page" title="Cómo se edita la Home Page (en preparación)" description="Pasos para agregar, borrar o editar información de la página de inicio, o para reordenar las secciones." />
+  <Card icon={<HomeIcon color={docsIconColors.turquesa} />} href="./website/paginas/editables/home-page" title="Cómo se edita la Home Page (en preparación)" description="Pasos para agregar, borrar o editar información de la página de inicio, o para reordenar las secciones." />
 
 <Card
-  icon={<TableProperties />}
-  href="/docs/colecciones/campeonatos"
+  icon={<TableProperties color={docsIconColors.turquesa} />}
+  href="./website/colecciones/campeonatos"
   title="Crear o editar un campeonato"
   description="Crear, editar y borrar entradas de este tipo de datos."
 />
 
 <Card
-  icon={<Speech />}
-  href="/docs/colecciones/asambleas"
+  icon={<Speech color={docsIconColors.turquesa} />}
+  href="./website/colecciones/asambleas"
   title="Crear o editar Asambleas"
   description="Crear, editar y borrar asambleas o reuniones de CD."
 />
 
 <Card
-  icon={<NotebookText />}
-  href="/docs/paginas"
+  icon={<NotebookText color={docsIconColors.turquesa} />}
+  href="./website/paginas"
   title="Tipos de páginas"
   description="Cuáles son los tipos de páginas que aparecen en el sitio y cómo se alimentan."
 />
 
   <Card
-  icon={<Layers />} href="/docs/colecciones/resultados" title="Resultados (en preparación)" description="Cómo agregar un resultado para que se vea en diferentes partes del sitio" />
+  icon={<Layers color={docsIconColors.turquesa} />} href="./website/colecciones/resultados" title="Resultados (en preparación)" description="Cómo agregar un resultado para que se vea en diferentes partes del sitio" />
 </Cards>

@@ -1,16 +1,20 @@
 {
   "name": "aoa-docs",
   "version": "0.0.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "build": "next build",
     "dev": "next dev",
     "start": "next start",
-    "types:check": "fumadocs-mdx && next typegen && tsc --noEmit",
+    "types:check": "fumadocs-mdx && next typegen && tsc --noEmit && pnpm lint:links",
     "postinstall": "fumadocs-mdx",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lint:links": "tsx lib/lint.ts"
   },
   "dependencies": {
+    "@fuma-translate/react": "^1.0.2",
+    "@fumadocs/language": "^0.2.2",
     "fumadocs-core": "16.9.0",
     "fumadocs-mdx": "15.0.7",
     "fumadocs-ui": "16.9.0",
@@ -26,10 +30,12 @@
     "@types/node": "^25.8.0",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "eslint": "^10.4.0",
+    "eslint-config-next": "16.2.6",
+    "next-validate-link": "^1.6.7",
     "postcss": "^8.5.14",
     "tailwindcss": "^4.3.0",
-    "typescript": "^6.0.3",
-    "eslint-config-next": "16.2.6",
-    "eslint": "^10.4.0"
+    "tsx": "^4.23.12",
+    "typescript": "^6.0.3"
   }
 }
