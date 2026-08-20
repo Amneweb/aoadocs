@@ -5,6 +5,7 @@ icon: BookOpen
 ---
 
 import { Card, Cards } from "fumadocs-ui/components/card";
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 import Link from "fumadocs-core/link";
 import { docsIconColors } from "@/lib/icon-colors";
 import {
@@ -23,7 +24,8 @@ El portal de trámites de la AOA permite realizar todos los trámites administra
 para que un competidor pueda participar en eventos del calendario y
 eventualmente seleccionar para participar en el exterior.
 
-### Requisitos para estar habilitado
+<Accordions type="single">
+  <Accordion title="Requisitos para estar habilitado">
 
 - Estar afiliado a la AOA
 - Tener su cuota anual al día
@@ -50,35 +52,113 @@ Click en el siguiente enlace para ir a la página del sitio de la FAY donde se p
   className="decoration-rose-500 underline-offset-6 hover:no-underline"
 >
   {"https://fay.org/menores-autorizados/"}
-</Link>
+</Link></Accordion>
+</Accordions>
 
-## Atajos
+## Secciones del tutorial
 
-Para navegar por la documentación usá el menú lateral o, en las tarjetas que siguen, elegí la sección que corresponda a tu tarea o función.
+Esta guía está dividida en tres secciones principales:
+
+#### 1. Información general
+
+Contiene información referida a todo el portal, e incluye la lógica del funcionamiento general y definiciones básicas.
+
+#### 2. Por tipo de usuario
+
+Agrupa a la documentación según el rol del usuario (si es un padre, entrenador, medidor, etc).
+
+#### 3. Por tarea
+
+Esta sección agrupa la documentación según las tareas o acciones que se pueden realizar en el portal.
+
+<Callout type="info" title="Inter relacionadas">
+  Como es de esperarse, las secciones no están aisladas sino que se relacionan
+  entre sí mediante enlaces.
+</Callout>
+
+## Elementos principales para navegar por el tutorial
+
+Te mostramos cómo moverte por el tutorial para que puedas encontrar más rápido lo que buscás.
+
+### Menú principal
+
+En vista de computadora se ubica a la izquierda de la pantalla (marcado con 1 en la imagen), en vista mobile se encuentra oculto y puede abrirse haciendo click en el ícono correspondiente, marcado con el número 3 en las imágenes.
+
+_Elementos de navegación en vista de computadora_ ⬇️
+
+![Capturas de pantalla donde se ven el menú y la TOC](/tutoriales-menu-toc.jpg)
+
+Apenas se carga el portal los elementos secundarios del menú se encuentran ocultos. Habrá que hacer click en cada item para desplegarlos e ir abriendo el árbol de navegación.
+
+### Tabla de contenido [TOC]
+
+En vista de computadora se ubica a la derecha de la pantalla (número 2); en vista mobile se ubica en la parte superior, debajo del logo. Al desplazar la pantalla, la TOC va cambiando según lo avanzado que estemos en las secciones, mostrando el título de la sección relevante. Se puede desplegar la tabla de contenido para verla completa haciendo click en la flecha a la derecha.
+
+_Elementos de navegación en vista mobile_ ⬇️
+
+![Capturas de pantalla de la vista mobile donde se ven el menú y la TOC](/tutoriales-menu-toc-mobile.jpg)
+
+### Buscador
+
+El buscador es la herramienta más poderosa para encontrar información en la guía, aunque hay que leer bien los resultados que ofrece la búsqueda antes de hacer click porque puede llevarte a páginas que ni siquiera pertenecen a este sector de la guía.
+
+<small>
+  El buscador devuelve resultados tanto de la guía sobre el uso del Portal como
+  de la guía para administradores del Website.
+</small>
+
+### Footer (pie de página)
+
+Al final de cada página hay uno o dos enlaces para moverse siguiendo la secuencia preestablecida de la documentación. Si estamos en el medio de una sección veremos un enlace para ir a la página anterior y otro para ir a la siguiente.
+Si estamos al final, sólo veremos el enlace para ir a la página anterior. Si estamos al principio, para ir a la siguiente.
+
+<Callout type="warning" title="No es lo mismo que volver atrás">
+  Si venimos navegando usando los enlaces del footer, avanzando por las páginas
+  en el orden establecido, el enlace de volver a la página anterior llevará a la
+  misma página que el botón 'volver atrás' del navegador. Pero si llegamos a una
+  página desde un enlace cualquiera, muy probablemente el destino del enlace de
+  ir a la página anterior no sea el mismo que el destino de VOLVER ATRÁS del
+  navegador.
+</Callout>
+
+### Atajos
+
+Además de usar los elementos de navegación descriptos más arriba, algunas páginas contendrán tarjetas como las siguientes, para ir "directo al grano", con enlaces a páginas relacionadas con el tema que trata la página actual.
+
+## Navegación según el rol
+
+Usá las tarjetas a continuación para ir a la sección de interés según tu tipo de rol.
 
 <Cards>
   <Card
     title="Adultos Responsables"
     icon={<FileUser color={docsIconColors.rosa} />}
     description="Gestión de afiliados vinculados, cuotas, pagos y embarcaciones."
-    href="./tutores"
+    href="./portal/tutores"
   />
   <Card
     title="Administradores de club"
     icon={<Store color={docsIconColors.rosa} />}
     description="Tareas disponibles para los representantes de los clubes."
-    href="/portal/administradores-de-club"
+    href="./portal/administradores-de-club"
   />
   <Card
     title="Personal AOA"
     icon={<Users color={docsIconColors.rosa} />}
     description="Administración de afiliados, pagos, mediciones y permisos."
-    href="/portal/personal-aoa"
+    href="./portal/personal-aoa"
   />
   <Card
     title="Entrenadores"
     icon={<Sailboat color={docsIconColors.rosa} />}
     description="Mediciones y notificaciones."
-    href="/portal/entrenadores"
+    href="./portal/entrenadores"
   />
 </Cards>
+
+<Callout type="idea" title="Navegar entre guías">
+  Para navegar entre esta guía y la guía para el administrador del sitio web,
+  usar el menú desplegable que aparece a la izquierda -en vista computadora- o
+  escondido -en vista mobile-, justo debajo del buscador. En esta página dicho
+  menú ahora debe decir "Portal" y tener un escudo rojo a la izquierda.
+</Callout>

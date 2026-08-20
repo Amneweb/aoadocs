@@ -6,14 +6,18 @@ export default function HomePage() {
     <main className="flex flex-1 flex-col px-10">
       <section className="container flex flex-col items-center gap-6 py-10 text-center">
         <h1 className="text-5xl font-bold uppercase tracking-tight">
-          Portal AOA | Guía de trámites
+          AOA | Guías de uso
         </h1>
+        <h2>
+          ⛔ Tanto el portal como esta documentación aún están en preparación
+        </h2>
         <p className="max-w-2xl text-md text-fd-muted-foreground text-justify">
-          Bienvenidos a la Documentación sobre el uso del Portal de trámites de
-          la Asociación. Hacé click en Trámites para encontrar toda la
-          información sobre los pasos a seguir para cada tarea según el rol que
-          tengas: encargado, entrenador, staff de AOA, medidor o representante
-          de club. ¿Listo para empezar?
+          Bienvenidos a la Documentación sobre el uso del Portal de Trámites y
+          la administración del sitio web de la Asociación.{" "}
+          <strong>¿Listos para empezar?</strong> <br></br>Si sos adulto
+          responsable de un competidor, entrenador, staff de AOA, medidor o
+          representante de club, hacé click en Portal de Trámites; si sos editor
+          del website, click en Webadmin.
         </p>
         <Image
           src="/docs/paraDocsLandingCompu.jpg"
@@ -30,13 +34,13 @@ export default function HomePage() {
             href="/portal"
             className="rounded-md bg-fd-primary px-6 py-3 font-medium text-fd-primary-foreground"
           >
-            Trámites
+            Portal de Trámites
           </Link>
           <Link
             href="/website"
             className="rounded-md border px-6 py-3 font-medium"
           >
-            Administración del website
+            Webadmin
           </Link>
         </div>
       </section>

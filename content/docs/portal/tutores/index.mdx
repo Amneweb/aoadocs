@@ -1,7 +1,41 @@
 ---
-title: Tutores
-description: Guías para madres, padres y tutores.
+title: Adultos responsables
+description: Guías para adultos encargados de cuentas de afiliados
 icon: Users
 ---
 
-Esta sección contendrá las guías para gestionar hijos, cuotas, pagos y embarcaciones desde el Portal AOA.
+import { User, CircleDollarSign, Sailboat } from "lucide-react";
+import { docsIconColors } from "@/lib/icon-colors";
+
+## 👨‍👩‍👧
+
+## ¿Quiénes son los adultos responsables?
+
+Un adulto responsable es un adulto vinculado a un afiliado (también llamado competidor) y que tiene una cuenta en el portal, es decir que puede acceder al portal con usuario y contraseña.
+
+Normalmente, los adultos responsables son automáticamente designados como tales al momento de cargar un nuevo afiliado, cuando dicho adulto no tenía una cuenta preexistente.
+
+Un adulto responsable puede dejar de serlo, previamente nombrando a otro adulto que tenga cuenta en el portal y que esté vinculado a un competidor.
+
+## Tareas que puede / debe realizar un adulto responsable
+
+<Cards className="grid-cols-1">
+  <Card
+    className="rounded-2xl w-full shadow-none transition-all hover:-translate-y-0.5 flex gap-4 items-center p-0 border-none hover:bg-transparent"
+    title="Crear nuevos afiliados"
+    icon={<User color={docsIconColors.rosa} />}
+    href="./crear-un-afiliado"
+  />
+  <Card
+    className="rounded-2xl w-full shadow-none transition-all hover:-translate-y-0.5 flex gap-4 items-center p-0 border-none hover:bg-transparent"
+    title="Informar pagos"
+    icon={<CircleDollarSign color={docsIconColors.rosa} />}
+    href="./informar-pagos"
+  />
+  <Card
+    className="rounded-2xl w-full shadow-none transition-all hover:-translate-y-0.5 flex gap-4 items-center p-0 border-none hover:bg-transparent"
+    title="Administrar barcos"
+    icon={<Sailboat color={docsIconColors.rosa} />}
+    href="./administrar-barcos-afiliados"
+  />
+</Cards>

@@ -8,6 +8,10 @@ import Link from "fumadocs-core/link";
 import { Tab, Tabs } from "fumadocs-ui/components/tabs";
 import { ExternalLink } from "lucide-react";
 
+## Rol/es autorizados
+
+`👨‍👩‍👧 Adultos responsables` | `👨‍👩‍👧 Adultos nuevos`
+
 ## Introducción
 
 Hay dos formas de crear un afiliado nuevo, esto depende de si el adulto responsable ya tiene o no tiene cuenta en el portal.
@@ -26,17 +30,17 @@ Recordemos que los afiliados los crea un adulto, que a su vez debe crearse una c
 <Tabs items={['Sin cuenta preexistente', 'Con cuenta preexistente']}>
   <Tab value="Sin cuenta preexistente">
 
-### Adulto sin cuenta preexistente
+### Adulto sin cuenta preexistente [!toc]
 
 <div className="fd-steps [&_h4]:fd-step">
 
 #### Ingresar al portal [!toc]
 
-La entrada al portal es: <Link external href="https://afiliados.optimist-argentina.org">afiliados.optimist-argentina.org</Link>
+La entrada al portal es: <Link className="decoration-rose-500 underline-offset-6 hover:no-underline" external href="https://afiliados.optimist-argentina.org">afiliados.optimist-argentina.org</Link>
 
 #### Elegir crear cuenta [!toc]
 
-Seleccionar Crear cuenta haciendo click en el botón azul
+Seleccionar Crear cuenta haciendo click en el botón blanco
 
 #### Cargar datos personales del adulto [!toc]
 
@@ -62,17 +66,23 @@ Se piden datos de la obra social y teléfonos de emergencia. Si el competidor ti
 </Tab>
   <Tab value="Con cuenta preexistente">
 
-### Adulto con cuenta preexistente
+### Adulto con cuenta preexistente [!toc]
 
 <div className="fd-steps [&_h4]:fd-step">
 
 #### Ingresar al portal [!toc]
 
-La entrada al portal es, igual que antes: <Link external href="https://afiliados.optimist-argentina.org">afiliados.optimist-argentina.org</Link>
+La entrada al portal es, igual que antes: <Link className="decoration-rose-500 underline-offset-6 hover:no-underline" external href="https://afiliados.optimist-argentina.org">afiliados.optimist-argentina.org</Link>
 
 #### Loguearse [!toc]
 
 Ingresar al portal con nombre de usuario o email, y contraseña. Si no se recuerda la contraseña, se puede elegir resetear el password. Si no se recuerda ni el usuario ni la contraseña, por favor ponerse en contacto con la AOA para recuperar la cuenta.
+
+<Callout type="idea" title="Antes de contactarte">
+  Si no estás seguro de haber tenido una cuenta anteriormente, te aconsejamos
+  que primero intentes crear una, de modo que una vez que cargues el DNI el
+  sistema te dirá si ya tenías una cuenta preexistente.
+</Callout>
 
 #### En el panel de control [!toc]
 

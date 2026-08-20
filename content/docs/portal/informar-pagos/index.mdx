@@ -1,0 +1,106 @@
+---
+title: Informar pagos
+description: Pasos para informar pagos
+icon: CreditCard
+---
+
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+
+## Rol/es autorizados
+
+`👨‍👩‍👧 Adulto responsable` | `💰 Tesorería` | `🧑🏻‍💻 Staff AOA`
+
+## ✋ Importante
+
+<Callout type="info">
+  En el caso de los **adultos responsables**, los pagos se pueden informar
+  recién una vez que se ha generado la deuda. Por ejemplo, no se podrá informar
+  el pago de una inscripción a un selectivo antes de haber completado el
+  formulario de inscripción respectivo y que su pago aparezca como pendiente. Lo
+  mismo pasa con la anualidad, no se podrá informar su pago antes de que la AOA
+  abra la ventana de pagos.
+</Callout>
+
+<Callout type="info">
+  Un adulto responsable que tiene a cargo más de un competidor podrá informar el
+  pago de las deudas de TODOS los competidores a su cargo, siempre que,
+  obviamente, se cumpla con la condición informadar recién.
+</Callout>
+
+## Pasos a seguir
+
+En los pasos que se informan a continuación vamos a obviar el login, es decir, comenzamos desde el momento en que el usuario ya está viendo el panel de control.
+
+<Tabs items={['Adultos responsables', 'Staff AOA y tesorería']}>
+  <Tab value="Adultos responsables">
+
+### Pasos para Adultos responsables 👨‍👩‍👧 [!toc]
+
+<div className="fd-steps [&_h4]:fd-step">
+
+#### En el menú principal, hacer click en Pagos [!toc]
+
+También se puede ir a la sección Pagos desde las tarjetas superiores, eligiendo la que dice Pagos Pendientes, o desde los atajos de más abajo en la página.
+**En los ejemplos que siguen, se considera que se va a pagar la inscripción a un Selectivo.**
+
+_Captura de pantalla donde se ve el enlace a Pagos en el menú principal_ ⬇️
+
+![Captura de pantalla de la vista desktop donde se ve el menú con el elemento Pagos](/tutoriales-informar-pago-1.jpg)
+
+#### Ir al formulario para informar pagos [!toc]
+
+La pantalla de pagos tiene 3 sectores bien definidos:
+
+1. Lista de pagos recientes y su situación respecto a la aprobación de parte de tesorería, con el enlace al recibo, si el pago ya fue aprobado.
+2. Lista de todos los pagos, agrupados según el concepto. Por defecto se muestran los pagos pendientes. Para ver la lista de aprobados, hacer click en el botón **Ver otros estados**
+3. Formulario para informar pagos. Como se explicó al principio de esta página, sólo se pueden informar los pagos cuya deuda ya exista, por lo tanto este formulario **se habilita sólo si hay pagos pendientes.**
+
+_Captura de pantalla de la sección Pagos, con 2 de los 3 formularios visibles_ ⬇️
+
+![Captura de pantalla de la vista desktop donde se ve la pantalla de la sección Pagos](/tutoriales-informar-pago-2.jpg)
+
+#### Seleccionar los conceptos a informar [!toc]
+
+Se deben elegir los conceptos cuyos pagos se van a informar (en este caso hay un solo concepto pendiente, pero podrían ser varias casillas las que se podrían seleccionar - en la imagen, marcadas con el número 3). A medida que se seleccionan las casillas, el total a abonar (4) se va actualizando automáticamente (ver 5).
+
+<Callout type="info">
+  Si el adulto tiene más de un competidor a cargo, en esta sección aparecerán
+  las deudas de todos sus competidores. Podrá elegir todos los conceptos de
+  todos, o sólo algunos de cada uno. Se pueden mezclar los competidores, no hace
+  falta informar pagos agrupados por competidor.
+</Callout>
+
+_Capturas de pantalla del formulario para informar pagos_ ⬇️
+
+![Captura de pantalla de la vista desktop donde se ve el formulario para informar Pagos](/tutoriales-informar-pago-3.jpg)
+
+#### Completar el resto del formulario [!toc]
+
+Los campos a completar son:
+
+- Fecha de transferencia o depósito
+- Medio de pago, se selecciona del menú desplegable
+- Número de referencia de pago (como aparece en el comprobante)
+- Si el comprobante no lo muestra, informar el nombre del titular de la cuenta desde la que se hace el pago
+- Imagen del comprobante (jpg, png o pdf)
+- Monto total del pago realizado. Este monto debe ser igual o mayor al total informado, de lo contrario no se podrá enviar el comprobante. Si no se abonó el total o más, se deberá deseleccionar alguno de los conceptos. Si el total abonado es mayor, se generará un crédito para uso posterior.
+
+#### Esperar a tesorería [!toc]
+
+Una vez enviado el comprobante, el pago aparecerá en la primera sección como INFORMADO, hasta que tesorería lo revisa y APRUEBA, en cuyo caso ya aparece como APROBADO.
+
+_Capturas de pantalla donde se ve el cambio de estado de un pago informado y el recibo emitido listo para descargar_ ⬇️
+
+![Captura de pantalla de la vista desktop donde se ve el cambio de estado de un pago informado](/tutoriales-informar-pago-4.jpg)
+
+#### Ver y/o descargar recibo [!toc]
+
+_Captura de pantalla de un recibo de ejemplo_ ⬇️
+
+![Captura de pantalla de un recibo de ejemplo](/tutoriales-informar-pago-5.jpg)
+
+#### FIN [!toc]
+
+</div>
+ </Tab>
+</Tabs>

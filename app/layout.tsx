@@ -10,7 +10,15 @@ export default function Layout({ children }: LayoutProps<"/">) {
   return (
     <html lang="es" suppressHydrationWarning>
       <body>
-        <RootProvider>{children}</RootProvider>
+        <RootProvider
+          search={{
+            options: {
+              api: "/docs/api/search",
+            },
+          }}
+        >
+          {children}
+        </RootProvider>
       </body>
     </html>
   );
