@@ -1,1 +1,4 @@
-{ "title": "Acerca del portal", "pages": ["index", "pantalla-principal"] }
+{
+  "title": "Acerca del portal",
+  "pages": ["index", "definiciones", "pantalla-principal"]
+}
