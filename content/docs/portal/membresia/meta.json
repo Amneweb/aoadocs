@@ -1,1 +1,4 @@
-{ "title": "Usuarios", "pages": ["index", "por-invitacion", "por-afiliacion"] }
+{
+  "title": "Usuarios",
+  "pages": ["index", "por-invitacion", "por-afiliacion", "por-importacion"]
+}

@@ -6,7 +6,7 @@ icon: BadgeCheck
 
 ## Creación de cuentas
 
-La creación de cuentas se puede realizar de dos maneras básicas:
+La creación de cuentas se puede realizar de tres maneras:
 
 ### 1. Por invitación
 
@@ -16,9 +16,13 @@ Un usuario administrador de AOA envía una invitación a la persona correspondie
 
 Se crea un nuevo afiliado, para lo cual el adulto que genera dicho afiliado debe crearse sí o sí su propia cuenta. Este procedimiento es exclusivo de Adultos responsables.
 
+### 3. Importación y validación de cuentas del portal anterior
+
+Al momento de habilitar el portal se importaron los datos de la base de datos del portal anterior, entre ellos: información de los adultos, competidores, barcos y situación de pagos. Los adultos responsables deberán verificar y eventualmente modificar los datos importados.
+
 En el caso `1`, la AOA definirá el rol del usuario al momento de enviar la invitación, por lo que la persona invitada, una vez finalizada la creación de su cuenta, tendrá el rol preestablecido y no podrá cambiarlo.
 
-En el caso `2`, el adulto será Adulto responsable del afiliado recién creado y ese rol tampoco se puede cambiar, salvo en los casos en que otro adulto asuma el rol de responsable y libere al adulto en cuestión de dicha responsabilidad, de manera que el adulto que inicialmente era responsable ahora pasa a ser sólo vinculado y no tiene más acceso al portal, salvo que sea responsable por otro competidor.
+En los casos `2` y `3` el adulto será Adulto responsable del afiliado recién creado y ese rol tampoco se puede cambiar, salvo en los casos en que otro adulto asuma el rol de responsable y libere al adulto en cuestión de dicha responsabilidad, de manera que el adulto que inicialmente era responsable ahora pasa a ser sólo vinculado y no tiene más acceso al portal, salvo que sea responsable por otro competidor.
 
 <Callout type="info" title="Adultos vinculados y responsables">
   La cuenta de cada competidor tiene información sobre el competidor y datos de
@@ -30,3 +34,29 @@ En el caso `2`, el adulto será Adulto responsable del afiliado recién creado y
   responsable puede tener varios competidores a su cargo, por ejemplo un padre
   con dos hijos.
 </Callout>
+
+#### Visualización de diferencia entre adulto responsable y vinculado
+
+<p className="uppercase">⛵ Desde el punto de vista del competidor</p>
+
+```
+Competidor
+│
+├── Adulto responsable
+│   └── Tiene cuenta y acceso al Portal
+│
+├── Adulto vinculado
+│   └── Sin cuenta / sin acceso
+│
+└── Adulto vinculado
+    └── Sin cuenta / sin acceso
+```
+
+<p className="uppercase">👨‍👦‍👦 Desde el punto de vista del adulto</p>
+
+```
+Adulto A
+├── Responsable de Competidor 1
+├── Responsable de Competidor 2
+└── Vinculado a Competidor 3
+```

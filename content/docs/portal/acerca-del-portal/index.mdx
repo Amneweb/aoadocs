@@ -44,3 +44,23 @@ Los roles son:
   responsable puede tener varios competidores a su cargo, por ejemplo un padre
   con dos hijos.
 </Callout>
+
+## Esquema de relación entre competidores y adultos
+
+```mermaid
+flowchart LR
+    S["⛵ Competidor"]
+
+    R["👤 Adulto responsable<br/><small>Cuenta + acceso al Portal</small>"]
+
+    V1["👤 Adulto vinculado<br/>"]
+    V2["👤 Adulto vinculado<br/><small>Sin acceso al Portal, sólo información</small>"]
+
+    S --- R
+    S --- V1
+    S --- V2
+
+    R -->|"puede agregar"| V3["👤 Nuevo adulto vinculado"]
+
+    R -->|"puede transferir<br/>la responsabilidad"| V1
+```

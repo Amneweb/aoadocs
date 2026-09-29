@@ -1,0 +1,136 @@
+---
+title: Cuentas por importación
+description: Pasos a seguir para rehabilitar cuentas existentes
+icon: ShieldUser
+---
+
+## Importación de datos
+
+Al momento de habilitar el portal se importaron los siguientes datos de la base de datos anterior:
+
+- Nombre, apellido, email, teléfono de padre, madre y contacto de emergencia de cada competidor
+- Nombre, apellido, email, teléfono y DNI del competidor
+- Nro de serie, nro de vela y demás datos de los barcos
+- Estado de los pagos de cada competidor
+
+Al portal anterior se ingresaba con el DNI del competidor y una clave, mientras que para este nuevo portal, el acceso no se hará con el DNI del competidor, sino con el email de un ADULTO RESPONSABLE. Al importar los datos, el sistema eligió como adulto responsable a uno de los dos padres del competidor, y creó cada cuenta con el email de dicho adulto.
+
+Para poder ingresar al sistema, cada adulto así seleccionado recibirá un email con una invitación para resetear la contraseña y así acceder al nuevo portal, luego de validar sus datos.
+
+## Validación de datos
+
+Dado que este nuevo portal requiere de los números de DNI de los adultos para asegurar la unicidad de los datos, es muy probable que, una vez reseteado el password, los adultos deban completar o editar sus datos (nombre, apellido y DNI) para así validar su identidad. Una vez validada la identidad, el adulto podrá ingresar al sistema, el cual ya tendrá cargados los datos del competidor o los competidores a cargo.
+
+## Diagramas conceptuales
+
+### Importación de cuentas
+
+```mermaid
+    flowchart TD
+    A["Importación desde la base de datos legacy"] --> B["Competidor"]
+
+    B --> C["Se importan los adultos asociados al competidor"]
+
+    C --> D{"¿Cuántos adultos<br/>fueron importados?"}
+
+    D -->|"1"| E["El adulto es seleccionado como<br/><b>Adulto responsable</b>"]
+
+    D -->|"2 o más"| F["El sistema selecciona un adulto como<br/><b>Adulto responsable</b>"]
+
+    F --> G["Los demás adultos se registran como<br/><b>Adultos vinculados</b>"]
+
+    E --> H["Se crea una cuenta pendiente<br/>para el Adulto responsable"]
+    F --> H
+
+    H --> I["Se envía email de invitación"]
+    I --> J["El adulto verifica su cuenta"]
+    J --> K["Puede ingresar al Portal"]
+
+    G --> L["Se almacenan sus datos<br/>sin crear una cuenta"]
+    L --> M["No tienen acceso al Portal"]
+
+    K --> N["Administra los datos<br/>del competidor"]
+```
+
+### Agregado de adulto vinculado
+
+```mermaid
+    flowchart TD
+    A["Adulto responsable<br/>ingresa al Portal"] --> B["Selecciona un competidor"]
+    B --> C["Agrega un nuevo<br/><b>Adulto vinculado</b>"]
+
+    C --> D["Completa los datos del adulto<br/>incluido el email"]
+    D --> E["Envía el formulario"]
+
+    E --> F["El Adulto vinculado<br/>se guarda inmediatamente"]
+
+    F --> G["Se envía un email informativo<br/>al nuevo adulto"]
+
+    G --> H{"¿Reconoce la vinculación?"}
+
+    H -->|"Sí. No se requiere ninguna acción"| I["La vinculación permanece activa"]
+
+    H -->|"No. El adulto no reconoce la vinculación"| J["Ingresa al enlace de rechazo<br/>incluido en el email"]
+
+    J --> K["La vinculación queda<br/>marcada como RECHAZADA"]
+
+    K --> L["El Adulto responsable ve<br/>el badge RECHAZADO en el Portal"]
+```
+
+    <Callout type="idea" title="La incorporación de un adulto vinculado no requiere aceptación">La vinculación se crea en el momento en que el Adulto responsable envía el formulario. El email recibido por el nuevo adulto tiene carácter informativo y permite rechazar la vinculación si no la reconoce.</Callout>
+
+    ### Cambio de adulto responsable
+
+```mermaid
+    flowchart TD
+    A["Adulto responsable<br/>ingresa al Portal"] --> B["Selecciona un competidor"]
+
+    B --> C["Solicita cambiar<br/>el Adulto responsable"]
+
+    C --> D["Selecciona uno de los<br/><b>Adultos vinculados</b><br/>al mismo competidor"]
+
+    D --> E["Envía la solicitud"]
+
+    E --> F["El adulto seleccionado recibe<br/>un email solicitando confirmación"]
+
+    F --> G{"¿Acepta ser<br/>Adulto responsable?"}
+
+    G -->|"No"| H["No se modifica<br/>el Adulto responsable"]
+
+    G -->|"Sí"| I{"¿Ya tiene una cuenta<br/>en el Portal?"}
+
+    I -->|"Sí"| J["Confirma la nueva responsabilidad"]
+
+    J --> K["Se actualiza la relación<br/>con el competidor"]
+
+    I -->|"No"| L["Crea su cuenta usando<br/>el email que recibió la invitación"]
+
+    L --> M["Define una contraseña"]
+
+    M --> N["Recibe un segundo email<br/>de verificación de cuenta"]
+
+    N --> O["Verifica su email"]
+
+    O --> P["La cuenta queda habilitada"]
+
+    P --> K
+
+    K --> Q["Puede ingresar al Portal"]
+
+    Q --> R["El competidor ya aparece<br/>asociado a su cuenta"]
+
+    R --> S["El nuevo adulto pasa a ser<br/><b>Adulto responsable</b>"]
+
+    S --> T["El anterior responsable deja<br/>de tener ese rol para ese competidor"]
+```
+
+## Videos explicativos
+
+Hacer click en el título para ver el video en Youtube.
+
+|                                                                          | Título                                                                                                                                                                                               | Descripción                                                                                                                  |
+| ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| ![Imagen de portada del video de youtube](/primeracceso1CoverSmall.jpeg) | <a href="https://www.youtube.com/watch?v=Y32vHqsemGU&list=PLT-U0qW5T4Eo&index=13&pp=iAQBsAgC" target='_blank'>Cuentas importadas: email de invitación al adulto responsable</a>                      | Introducción a la importación de los datos desde la base de datos vieja (legacy), adultos responsables e email de invitación |
+| ![Imagen de portada del video de youtube](/primeracceso2CoverSmall.jpeg) | <a href="https://www.youtube.com/watch?v=667lDDIXlSw&list=PLT-U0qW5T4Eo&index=11&pp=iAQBsAgC" target='_blank'>Cuentas importadas: reseteo de password, validación de datos e ingreso a la cuenta</a> | Aceptación de la invitación a crear la cuenta, reseteo de password y carga de datos faltantes                                |
+| ![Imagen de portada del video de youtube](/primeracceso3CoverSmall.jpeg) | <a href="https://www.youtube.com/watch?v=72qImDL698I&list=PLT-U0qW5T4Eo&index=12&pp=iAQBsAgC" target='_blank'>Cuentas importadas: recorrido por panel de control</a>                                 | Un recorrido por la pantalla principal del portal para los usuarios con rol de adultos responsables                          |
+| ![Imagen de portada del video de youtube](/primeracceso4CoverSmall.jpeg) | <a href="https://www.youtube.com/watch?v=gmaBT1TmFWA&list=PLT-U0qW5T4Eo&index=15&pp=iAQBsAgC" target='_blank'>Cuentas importadas: cambio de adulto responsable</a>                                   | Pasos a seguir para agregar un nuevo adulto vinculado y eventualmente transformarlo en adulto responsable                    |

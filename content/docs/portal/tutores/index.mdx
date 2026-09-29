@@ -15,7 +15,7 @@ Un adulto responsable es un adulto vinculado a un afiliado (también llamado com
 
 Normalmente, los adultos responsables son automáticamente designados como tales al momento de cargar un nuevo afiliado, cuando dicho adulto no tenía una cuenta preexistente.
 
-Un adulto responsable puede dejar de serlo, previamente nombrando a otro adulto que tenga cuenta en el portal y que esté vinculado a un competidor.
+Un adulto responsable puede solicitar que otro adulto ya vinculado al competidor asuma la responsabilidad. La AOA puede iniciar el mismo proceso.
 
 ## Tareas que puede / debe realizar un adulto responsable
 
@@ -39,3 +39,81 @@ Un adulto responsable puede dejar de serlo, previamente nombrando a otro adulto 
     href="./administrar-barcos-afiliados"
   />
 </Cards>
+
+## Esquema de relación entre competidores y adultos
+
+```mermaid
+flowchart LR
+    S["⛵ Competidor"]
+
+    R["👤 Adulto responsable<br/><small>Cuenta + acceso al Portal</small>"]
+
+    V1["👤 Adulto vinculado<br/>"]
+    V2["👤 Adulto vinculado<br/><small>Sin acceso al Portal, sólo información</small>"]
+
+    S --- R
+    S --- V1
+    S --- V2
+
+    R -->|"puede agregar"| V3["👤 Nuevo adulto vinculado"]
+
+    R -->|"puede transferir<br/>la responsabilidad"| V1
+```
+
+## Cómo cambiar de adulto responsable
+
+En la ficha del competidor, dentro de **Adultos vinculados**, usá **Cambiar adulto responsable**, elegí otro adulto con un vínculo activo y confirmado y presioná **Solicitar cambio de responsable**. El adulto elegido recibirá un email para aceptar o rechazar.
+
+- Si ya tiene una cuenta con email verificado, sólo necesita aceptar la responsabilidad para ese competidor.
+- Si no tiene cuenta, debe aceptar la responsabilidad, crear su cuenta y verificar su email mediante el correo de confirmación. Puede completar la aceptación y el alta de cuenta en cualquier orden.
+- Hasta que se cumplan ambas condiciones, el adulto actual sigue siendo responsable. Crear una cuenta o aceptar por separado no completa el cambio ni habilita el acceso de la cuenta nueva al portal.
+- Rechazar la solicitud mantiene al adulto como vinculado y no cambia al responsable actual.
+
+La invitación dura 30 días. Enviar una nueva solicitud reemplaza la anterior.
+
+Cuando el cambio se completa, el adulto anterior conserva su cuenta y su vínculo con el competidor. Si no es responsable de otro competidor, pierde el acceso como adulto responsable. Si tiene otro rol activo, como entrenador o personal AOA, conserva el acceso de ese rol; de lo contrario, su perfil queda inactivo. Si más adelante acepta una nueva responsabilidad, puede volver a usar la misma cuenta.
+
+### Diagrama de pasos a seguir para cambiar el adulto responsable
+
+```mermaid
+    flowchart TD
+    A["Adulto responsable<br/>ingresa al Portal"] --> B["Selecciona un competidor"]
+
+    B --> C["Solicita cambiar<br/>el Adulto responsable"]
+
+    C --> D["Selecciona uno de los<br/><b>Adultos vinculados</b><br/>al mismo competidor"]
+
+    D --> E["Envía la solicitud"]
+
+    E --> F["El adulto seleccionado recibe<br/>un email solicitando confirmación"]
+
+    F --> G{"¿Acepta ser<br/>Adulto responsable?"}
+
+    G -->|"No"| H["No se modifica<br/>el Adulto responsable"]
+
+    G -->|"Sí"| I{"¿Ya tiene una cuenta<br/>en el Portal?"}
+
+    I -->|"Sí"| J["Confirma la nueva responsabilidad"]
+
+    J --> K["Se actualiza la relación<br/>con el competidor"]
+
+    I -->|"No"| L["Crea su cuenta usando<br/>el email que recibió la invitación"]
+
+    L --> M["Define una contraseña"]
+
+    M --> N["Recibe un segundo email<br/>de verificación de cuenta"]
+
+    N --> O["Verifica su email"]
+
+    O --> P["La cuenta queda habilitada"]
+
+    P --> K
+
+    K --> Q["Puede ingresar al Portal"]
+
+    Q --> R["El competidor ya aparece<br/>asociado a su cuenta"]
+
+    R --> S["El nuevo adulto pasa a ser<br/><b>Adulto responsable</b>"]
+
+    S --> T["El anterior responsable deja<br/>de tener ese rol para ese competidor"]
+```
