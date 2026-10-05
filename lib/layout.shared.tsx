@@ -17,7 +17,7 @@ export function baseOptions(): BaseLayoutProps {
     links: [
       { text: "Guía portal de trámites", url: "/portal" },
       { text: "Guía edición website", url: "/website" },
-      { text: "Web de AOA", url: "/" },
+      { text: "Web de AOA", url: "./" },
     ],
     githubUrl: `https://github.com/${gitConfig.user}/${gitConfig.repo}`,
   };
