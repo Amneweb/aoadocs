@@ -6,10 +6,11 @@ export default function HomePage() {
     <main className="flex flex-1 flex-col px-10">
       <section className="container flex flex-col items-center gap-6 py-10 text-center">
         <h1 className="text-5xl font-bold uppercase tracking-tight">
-          AOA | Guías de uso
+          Guías de uso Portal y Website
         </h1>
         <h2>
-          ⛔ Tanto el portal como esta documentación aún están en preparación
+          🫸 Si tenés dudas con el uso del portal escribí al whatsapp +54 9
+          1166196503
         </h2>
         <p className="max-w-2xl text-md text-fd-muted-foreground text-justify">
           Bienvenidos a la Documentación sobre el uso del Portal de Trámites y
