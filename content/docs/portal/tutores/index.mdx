@@ -4,7 +4,7 @@ description: Guías para adultos encargados de cuentas de afiliados
 icon: Users
 ---
 
-import { User, CircleDollarSign, Sailboat } from "lucide-react";
+import { User, CircleDollarSign, Sailboat, SquarePen } from "lucide-react";
 import { docsIconColors } from "@/lib/icon-colors";
 
 ## 👨‍👩‍👧
@@ -37,6 +37,12 @@ Un adulto responsable puede solicitar que otro adulto ya vinculado al competidor
     title="Administrar barcos"
     icon={<Sailboat color={docsIconColors.rosa} />}
     href="./administrar-barcos-afiliados"
+  />
+  <Card
+    className="rounded-2xl w-full shadow-none transition-all hover:-translate-y-0.5 flex gap-4 items-center p-0 border-none hover:bg-transparent"
+    title="Inscribir competidores"
+    icon={<SquarePen color={docsIconColors.rosa} />}
+    href="./inscribir-competidores"
   />
 </Cards>
 
