@@ -8,16 +8,16 @@
     "---Información general---",
     "acerca-del-portal",
     "membresia",
-    "---Por tipo de usuario---",
-    "tutores",
-    "entrenadores",
-    "administradores-de-club",
-    "personal-aoa",
     "---Por tarea---",
     "crear-un-afiliado",
     "informar-pagos",
     "inscribir-competidores",
     "administrar-barcos-afiliados",
-    "reservar-medicion"
+    "reservar-medicion",
+    "---Por tipo de usuario---",
+    "tutores",
+    "entrenadores",
+    "administradores-de-club",
+    "personal-aoa"
   ]
 }

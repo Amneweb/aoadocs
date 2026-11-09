@@ -1,0 +1,79 @@
+---
+title: Fechas con doble validez
+description: Reserva de turnos para items con validez para dos temporadas
+icon: Calendar
+---
+
+import Link from "fumadocs-core/link";
+import { Tab, Tabs } from "fumadocs-ui/components/tabs";
+import { ExternalLink } from "lucide-react";
+
+Rol/es autorizados
+
+`👨‍👩‍👧 Entrenadores` | `🧑🏻‍💻 Staff AOA`
+
+## Casos especiales: doble validez
+
+Cuando se adelantan las fechas de medición de un año determinado a noviembre o diciembre del año anterior pueden darse distintas situaciones:
+
+1. Que el competidor quiera medir uno o más items con validez sólo para el año en curso en el que efectivamente se mide (este caso se da cuando se trata de competidores en su último año, o cuando sólo quiera medir un elemento distinto a los que ya midió por necesidad puntual -por ejemplo una rotura-, sabiendo que medirá todo en fechas posteriores)
+
+2. Que el competidor quiera medir todo con validez para el año siguiente (esto quiere decir que en lo que resta del año navegará con items aprobados en la medición anual del año en curso)
+
+3. Que el competidor tenga items nuevos que quiera usar con validez para el año en curso, pero quiera aprovechar la fecha de medición para validar los elementos nuevos y todos los demás para el año siguiente.
+
+**En esta página explicaremos los pasos para el caso 3**
+
+En el ejemplo que sigue consideraremos que:
+
+- Año en curso = 2026
+
+- Año siguiente = 2027
+
+- Validez principal de la fecha de medición = 2027
+
+- Jornadas de medición = noviembre de 2026, antes del Campeonato Argentino 2026
+
+- El competidor quiere medir todo su equipamiento con validez para 2027, a excepción del timón, que lo quiere usar en el Argentino pero no lo midió en ninguna fecha de 2026.
+
+<Callout type="warning" title="Se genera una deuda de medición de timón">
+  Como el competidor ya había medido todo en fechas anteriores de 2026, el timón
+  generará una obligación de pago por ser la segunda o tercera vez que hace
+  medir un timón en 2026
+</Callout>
+
+### Pasos a seguir
+
+<div className="fd-steps [&_h4]:fd-step">
+
+#### Intenciones 2026 y 2027 [!toc]
+
+El entrenador primero deberá generar las intenciones de los competidores que tengan items nuevos que quieran medir para 2026 y 2027. En este caso puntual será el navegante que quiere medir un timón nuevo, nunca medido en 2026.
+
+- Elige la fecha en el cuadro azul
+
+- Selecciona el competidor en cuestión y en el selector de año de validez elige _Ambos (2026 y 2027)_
+
+- Elige **sólo** el item a medir para ambos años, en el caso del ejemplo es el timón
+
+- Carga los datos del timón
+
+- Guarda la intención
+
+- Los adultos responsables pagan el valor de la medición y lo informan
+
+#### Reservas 2026 y 2027 [!toc]
+
+Una vez informado el pago el entrenador deberá realizar la reserva de los casos especiales. Los demás competidores se podrán cargar recién realizado este paso.
+
+#### Intenciones y reservas para 2027 [!toc]
+
+Una vez cargadas las reservas para los competidores que necesitan la validez doble de algunos de sus items, el entrenador deberá proceder con las reservas de todos sus competidores INCLUIDO el competidor por el que acaba de reservar. En este caso y para cada competidor elegirá año de validez 2027.
+
+El competidor especial tendrá los elementos ya reservados (en nuestro ejemplo el timón) deshabilitados, pero todos los demás deberán seleccionarse y sus datos ingresarse normalmente.
+
+Generar las intenciones para todos los competidores y luego las reservas correspondientes (no deberían generarse nuevas obligaciones ya que para todos los competidores será la primera medición del año). En el caso del competidor especial, los nuevos items aparecerán en el mismo horario que los anteriores.
+
+#### FIN. El grupo tiene los turnos reservados. [!toc]
+
+</div>
