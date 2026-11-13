@@ -1,1 +1,4 @@
-{ "title": "Medición", "pages": ["index", "conceptos", "doble-fecha"] }
+{
+  "title": "Medición",
+  "pages": ["index", "conceptos", "doble-fecha", "diagrama-doble-fecha"]
+}
