@@ -12,11 +12,133 @@ Rol/es autorizados
 
 `👨‍👩‍👧 Entrenadores` | `🧑🏻‍💻 Staff AOA`
 
-## Pasos para reservar turnos de medición
+Los `adultos responsables` no pueden generar reservas. SI recibirán un email con la confirmación del turno, pero no administran las mismas.
 
-<Callout type="warning" title="Las reservas las realiza sólo el entrenador">
-  Los adultos responsables no pueden generar reservas. Si recibirán un email con
-  la confirmación del turno, pero no administran las mismas
+## Cómo reservar turnos de medición
+
+#### DEFINICIONES
+
+`Fecha` o sesión de medición: Consiste en uno o varios días en los que se desarrolla la medición para inspeccionar los elementos de integrantes de la flota, ya sea con validez para un año, con validez específica para un campeonato, o para algún fin determinado. La fecha es un concepto cerrado, con reglas propias que funcionan por igual para todos los días que dura la fecha.
+
+`Jornada`: es cada uno de los días que conforman una fecha. Cada jornada se compone de turnos de 10 minutos.
+
+`Turno`: cada intervalo de 10 minutos para medir los elementos de un competidor. No necesariamente se empieza y termina el turno como lo indica el cronograma, ya que algunos items llevan más tiempo que otros.
+
+#### REGLAS BÁSICAS
+
+<Callout type="info" title="NO SE PUEDEN ELEGIR NI LAS JORNADAS NI LOS TURNOS">
+  Al efectuar la reserva, el sistema otorga los turnos en base a la
+  disponibilidad al momento de realizarse la reserva, siempre y cuando haya la
+  cantidad de lugares necesaria para que todos los competidores de un mismo
+  entrenador puedan ser medidos en un mismo día.
 </Callout>
 
-En breve
+<Callout type="info" title="UN TURNO POR COMPETIDOR">
+  En una determinada fecha, salvo casos especiales como ser remediciones por
+  correcciones, o rotura, se otorgará **un turno por competidor**.
+</Callout>
+
+<Callout type="info" title="UN SOLO EJEMPLAR">
+  En una determinada fecha, cada competidor podrá inspeccionar / medir UN SOLO
+  EJEMPLAR de un determinado elemento (un solo timón, una sola orza, etc)
+</Callout>
+
+Quienes quieran medir más de un ejemplar deberán hacerlo en dos fechas
+diferentes (o la cantidad necesaria de fechas). Esto es independientemente del
+año de validez del elemento a medir. Por ejemplo en fechas con validez para
+dos años (año actual y año que viene) sólo se puede medir una vela, aunque
+querramos usar la vela A sólo en el año en curso y la vela B el año que viene.
+Ver ejemplos y cuadros de situación en esta página: <a href="./reservar-medicion/diagrama-doble-fecha">Fechas dobles</a>
+
+### Pasos para la reserva de turnos
+
+Como siempre, el primer paso es loguearse al portal: <Link className="decoration-rose-500 underline-offset-6 hover:no-underline" external href="https://portal.optimist-argentina.org">portal.optimist-argentina.org</Link>
+
+Una vez en el portal, elegimos **Mediciones** en el menú principal.
+
+<Callout type="warning" title="Ejemplo básico">
+  Este ejemplo corresponde a una fecha de medición de "validez simple". Esto
+  quiere decir que la medición habilita para un solo año (generalmente el mismo
+  año de la fecha real de medición). En las fechas adelantadas (se mide antes
+  del año de validez) con posible validez doble, se realizarán reservas para
+  cada uno de los años de validez, como se explica en
+  <a href="./doble-fecha">esta página</a>
+</Callout>
+
+<Callout title="Imagenes" type="warn">
+  En los pasos a continuación se muestran las imágenes del rol Entrenador. Para
+  el staff de AOA el proceso es similar. La diferencia es que, como el staff de
+  AOA puede reservar para cualquier competidor, los mismos no aparecen listados,
+  sino que habrá que buscar uno por uno.
+</Callout>
+
+<div className="fd-steps [&_h4]:fd-step">
+
+#### Elegir la fecha [!toc]
+
+Elegir la fecha en el menú desplegable de la caja azul. Normalmente hay una sola fecha disponible, salvo que se hagan sesiones en varias ciudades al mismo tiempo. En este caso prestar atención a elegir la ciudad correcta.
+
+![Captura de pantalla de la vista desktop donde se ve la caja azul para elegir la fecha](/medicion1.jpg)
+
+#### Intenciones de reserva [!toc]
+
+Una vez seleccionada la fecha, aparecerán los competidores pertenecientes al entrenador y se procede a realizar la Intención de reserva. Para poder elegir a sus competidores, estos deberán haber pagado la anualidad correspondiente, sino no se los podrá seleccionar.
+
+<i>
+  El entrenador podrá esperar a que los padres o tutores del competidor abonen
+  la cuota anual y hacer la reserva de todos los competidores al mismo tiempo, o
+  dejar a ese competidor de lado y reservar para el resto.
+</i>
+
+![Captura de pantalla de la vista desktop donde se ve el listado de competidores habilitados y no habilitados](/medicion2.jpg)
+
+**SELECCIONAR COMPETIDORES Y ELEMENTOS**
+
+Para cada competidor se deberán elegir los elementos a medir. Si es la primera vez que miden, deberá cargarse la información de cada elemento. Si ya midieron, podrá elegirse el elemento existente o, si se quiere medir un elemento que nunca fue medido, se deberán cargar los datos de dicho elemento.
+
+![Captura de pantalla de la vista desktop donde se ven ejemplos de carga de elementos y sus datos](/medicion3.jpg)
+
+En la imagen que sigue se ve un ejemplo de pedido de medición de casco en el caso de no tener el libro. Deberá cargarse el motivo y seleccionar las casillas de solicitud de permiso de participación sin libro y compromiso de presentación a futuro. (El tiempo de gracia lo definirá la AOA. Consultar con el medidor de turno ante cualquier duda.)
+
+![Captura de pantalla de la vista desktop donde se ve ejemplos de carga de elementos y sus datos](/medicion4.jpg)
+
+Una vez seleccionados los competidores y sus elementos, al final de la lista de competidores se debe hacer click en el botón de Generar intención.
+
+#### Confirmación de reservas [!toc]
+
+Una vez realizada la intención podrán surgir dos situaciones:
+
+- El competidor no había medido nunca en ese año, con lo cual tiene una medición gratis para cada uno de sus elementos
+- El competidor ya había medido uno o todos sus elementos en ese año, por lo que deberá abonar el valor de la segunda medición antes de poder confirmar la reserva.
+
+![Captura de pantalla de la vista desktop donde se ven los ejemplos de medición gratis y medición paga](/medicion5.jpg)
+
+Luego de abonado el valor de la segunda medición de cada uno de los competidores que así lo requieren, el entrenador podrá seleccionar a todos sus alumnos y confirmar la reserva haciendo click en el botón correspondiente.
+
+![Captura de pantalla de la vista desktop donde se ven los competidores habilitados para la confirmación de reserva](/medicion6.jpg)
+
+#### Verificación y eventual pedido de corrección [!toc]
+
+Generada la reserva, el entrenador podrá ver el detalle de lo reservado para cada competidor, con su horario y código de reserva.
+
+✋ Esta información le llegará por email al entrenador y a cada uno de los adultos responsables de los competidores involucrados.
+
+![Captura de pantalla de la vista desktop donde se ve el detalle de las reservas confirmadas](/medicion7.jpg)
+
+Si al momento de verificar los datos el entrenador se da cuenta de que hay un error, podrá escribir a la AOA a través del formulario de notificaciones al final de las reservas.
+
+#### FIN. Verificación en el portal y sitio web [!toc]
+
+El entrenador podrá verificar la reserva de sus turnos en el calendario de reservas en esa misma página del portal, o en el calendario público en el sitio web, en el enlace siguiente:
+
+<Link
+  className="decoration-rose-500 underline-offset-6 hover:no-underline"
+  external
+  href="https://optimist-argentina.org/mediciones"
+>
+  optimist-argentina.org/mediciones
+</Link>
+
+![Captura de pantalla de la vista desktop del calendario de la jornada de medición con los turnos reservados](/medicion8.jpg)
+
+</div>
